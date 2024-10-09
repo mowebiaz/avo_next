@@ -1,0 +1,124 @@
+@use './variables' as *;
+
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo {
+    filter: invert();
+  }
+}
+
+*/
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $font-color;
+  background: $background-color;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 85vw;
+  max-width: $max-width;
+}
+
+/*h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+} */
+
+
+button:hover {
+  cursor: pointer;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit; /*font-size, font-weight, and font-family*/
+}
+
+input,
+textarea {
+    border: none;
+    background: none;
+}
+
+button,
+dialog {
+    background-color: transparent;
+    color: inherit;
+}
+
+
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word; /* voir text-balance*/
+    text-wrap: balance;
+}
+
+

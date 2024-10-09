@@ -1,0 +1,10 @@
+@use '@/app/styles/variables' as *;
+
+footer {
+  margin-top: auto; /* for sticky footer */
+  width: 100vw;
+  display: flex;
+  background-color: $font-color;
+  color: $background-color;
+
+}
