@@ -1,0 +1,9 @@
+@use '@/app/styles/variables' as *;
+
+
+
+@media screen and (min-width: calc($breakpoint-nav + 1px)) {
+  .mobile {
+      display: none;
+  }
+}

@@ -9,8 +9,7 @@ export function Header() {
     <header>
       <LogoContainer />
       <NavDesktop />
-      {/*     <NavMobile />
-       */}
+      <NavMobile />
     </header>
   )
 }
