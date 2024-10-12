@@ -4,7 +4,13 @@ footer {
   margin-top: auto; /* for sticky footer */
   width: 100vw;
   display: flex;
-  background-color: $font-color;
+  background-color: $footer-color;
   color: $background-color;
+  height: 2rem;
+  div {
+    height: 100%;
+    width: 100px;
+    background-color: $primary-color;
+  }
 
 }

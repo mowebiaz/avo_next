@@ -1,0 +1,22 @@
+@use '@/app/styles/variables' as *;
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 75px;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    svg {
+      color: $primary-color;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import { Header } from './components/Header/Header'
 import { Footer } from './components/Footer/Footer'
 import { Merienda, Raleway } from 'next/font/google'
 import './styles/globals.scss'
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <body className={`${merienda.variable} ${raleway.variable}`}>
+        <Header />
         {children}
         <Footer />
       </body>

@@ -1,0 +1,13 @@
+@use '@/app/styles/variables' as *;
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  height: 5rem;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  /*z-index: 99;*/
+  background-color: $footer-color;
+}
