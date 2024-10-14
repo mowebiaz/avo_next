@@ -16,13 +16,11 @@
             justify-content: center;
 
             a {
-                font-family: var(--font-merienda);
                 font-weight: 600;
                 font-size: 1.25rem;
                 letter-spacing: 2px;
                 padding-block: 0.5rem;
                 padding-inline: clamp(0.3rem, 1.5vw, 1rem);
-                /*padding: 0.5rem 1rem;*/
                 width: 100%;
                 height: 100%;
                 border-radius: 8px;

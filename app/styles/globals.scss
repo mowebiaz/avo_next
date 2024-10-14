@@ -44,7 +44,7 @@ body {
 
 html,
 body {
-  max-width: 100vw;
+  max-width: 100vw;  
   height: 100vh;
   overflow-x: hidden;
 }
@@ -66,26 +66,44 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
+  flex: 1 0 auto;
+  margin-top: clamp(0.5rem, 3vh, 5rem); /* à revoir*/
   width: 85vw;
   max-width: $max-width;
 }
 
 h1 {
+  font-family: var(--font-merienda);
+  text-align: center;
+  font-size: 2.1rem;
+  text-wrap: balance;
+  padding: 1rem;
+
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+
+
+h2, h3, p, li {
+  font-family: var(--font-raleway);
+}
+
+/*h1 {
   color: $title-color;
   font-size: 2.5rem;
 }
 
-
-
 /*h2 {
   font-size: 2rem;
-}
+}*/
 
 a {
   color: inherit;
   text-decoration: none;
-} */
+} 
 
 
 button:hover {
@@ -111,7 +129,7 @@ dialog {
     color: inherit;
 }
 
-p,
+
 h1,
 h2,
 h3,
@@ -119,8 +137,9 @@ h4,
 h5,
 h6 {
     overflow-wrap: break-word; /* voir text-balance*/
-    text-wrap: balance;
 }
+
+
 
 .sr-only {
   position: absolute;

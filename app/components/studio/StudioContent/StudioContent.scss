@@ -1,0 +1,30 @@
+@use '@/app/styles/variables' as *;
+
+.studio-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .equipments {
+        &-list {
+            list-style-position: inside;
+            list-style-type: square;
+            padding-left: 1rem;
+        }
+        &-badgelist {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 1rem;
+            li {
+                border: 1px solid $footer-color;
+                border-radius: 5px;
+                padding: 0.2rem 0.5rem;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
