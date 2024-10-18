@@ -1,0 +1,38 @@
+@use '@/app/styles/variables' as *;
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    div {
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 5px;
+        padding: 0.2rem 0.5rem;
+        transition: all 0.2s ease-in-out;
+
+        &[data-linkcategory='sur place'] {
+            border-color: $surplace-dark;
+            &:hover {
+                background-color: $surplace-light;
+            }
+        }
+        &[data-linkcategory='ski'] {
+            border-color: $ski-dark;
+            &:hover {
+                background-color: $ski-light;
+            }
+        }
+        &[data-linkcategory='trajets'] {
+          border-color: $trajets-dark;
+          &:hover {
+              background-color: $trajets-light;
+          }
+      }
+    }
+
+    a {
+        display: inline-block;
+    }
+}
