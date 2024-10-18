@@ -1,9 +1,12 @@
+import './BurgerIcon.scss'
+
+
 export function BurgerIcon({isOpen}) {
   return (
     <svg
-    className={`burger ${isOpen ? 'open' : ''}`}
-    width="80"
-      height="80"
+    className={isOpen ? 'active' : ''}
+    width="50"
+      height="50"
       viewBox="0 0 200 200"
     >
       <g

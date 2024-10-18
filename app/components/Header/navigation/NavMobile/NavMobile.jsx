@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react'
 import { BurgerIcon } from '../../BurgerIcon/BurgerIcon'
+import { routeList } from '../routeList'
 import './NavMobile.scss'
 
 export function NavMobile() {
@@ -31,6 +32,23 @@ export function NavMobile() {
         <span className="sr-only">Menu</span>
         <BurgerIcon isOpen={isOpen} />
       </button>
+      {isOpen && (
+        <nav
+          className="nav-mobile"
+          id="navigation"
+          aria-label="Menu"
+        >
+          <ul>
+            {routeList.map((route) => {
+              return (
+                <li key={route.name}>
+                  <a href={route.path}>{route.icon}{route.name}</a>
+                </li>
+              )
+            })}
+          </ul>
+        </nav>
+      )}
     </div>
   )
 }
