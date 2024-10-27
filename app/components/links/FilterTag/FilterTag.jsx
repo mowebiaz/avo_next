@@ -17,6 +17,7 @@ export function FilterTag({
 
   return (
     <div className="filters">
+      <p>Filtrer:</p>
       {categoriesList.map((category) => (
         <button
           type="button"
