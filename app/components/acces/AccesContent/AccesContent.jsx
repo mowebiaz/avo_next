@@ -225,15 +225,16 @@ export function AccesContent() {
           </div>
           <h3>Arrivée par l&apos;accueil station</h3>
         </div>
-
         <p>
           La Route d’Avoriaz vous emmène jusqu’à l&apos;accueil station, situé
           en haut d&apos;Avoriaz. A votre arrivée, dirigez-vous directement au
           quai de déchargement afin de décharger vos bagages, avant de vous
           garer dans l&apos;un des parkings couverts ou sur le parking
-          extérieur. Puis prendre une navette ou un traîneau pour rejoindre le
-          bas de la station, où se trouve notre studio.
+          extérieur. Puis prendre une chenillette (13,50€) ou un traîneau (14€) pour rejoindre le
+          bas de la station, où se trouve notre studio. 
         </p>
+                  {/*           L'accueil' sur google map:
+           */}
         <h3>Les parkings</h3>
         <p>Les parkings sont gratuits en été.</p>
         <p>En hiver:</p>

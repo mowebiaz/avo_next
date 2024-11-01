@@ -47,7 +47,7 @@ export function StudioContent() {
         </p>
         {/*         TODO: photo le pas du lac
          */}
-        <ButtonLink href="/acces">Comment accéder au studio ?</ButtonLink>
+        <ButtonLink href="/acces#studio">Comment accéder au studio ?</ButtonLink>
         {/*       TODO: Localisation interactive
          */}
       </section>
