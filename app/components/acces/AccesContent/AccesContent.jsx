@@ -1,3 +1,4 @@
+import { TitleWithIcon } from '../../TitleWithIcon/TitleWithIcon'
 import { FaCar, FaPlaneDeparture } from 'react-icons/fa'
 import { FaTrain, FaCableCar } from 'react-icons/fa6'
 import { MdHomeWork } from 'react-icons/md'
@@ -25,12 +26,11 @@ export function AccesContent() {
           accéder au studio par d&apos;autres moyens de transport: à pied, en
           traineau ou chenillette.
         </p>
-        <div className="line-title">
-          <div className="icon-containter">
-            <FaCableCar />
-          </div>
-          <h3>Arrivée par les Prodains</h3>
-        </div>
+
+        <TitleWithIcon
+          title={<h3>Arrivée par les Prodains</h3>}
+          icon={<FaCableCar />}
+        />
         <p>
           Se garer au &quot;parking longue durée&quot; des Prodains (parking
           découvert). Puis prendre le téléphérique des Prodains Express, qui
@@ -219,29 +219,28 @@ export function AccesContent() {
           </table>
         </div>
 
-        <div className="line-title">
-          <div className="icon-containter">
-            <MdHomeWork />
-          </div>
-          <h3>Arrivée par l&apos;accueil station</h3>
-        </div>
+        <TitleWithIcon
+          title={<h3>Arrivée par l&apos;accueil station</h3>}
+          icon={<MdHomeWork />}
+        />
         <p>
           La Route d’Avoriaz vous emmène jusqu’à l&apos;accueil station, situé
           en haut d&apos;Avoriaz. A votre arrivée, dirigez-vous directement au
           quai de déchargement afin de décharger vos bagages, avant de vous
           garer dans l&apos;un des parkings couverts ou sur le parking
-          extérieur. Puis prendre une chenillette (13,50€) ou un traîneau (14€) pour rejoindre le
-          bas de la station, où se trouve notre studio. 
+          extérieur. Puis prendre une chenillette (13,50€) ou un traîneau (14€)
+          pour rejoindre le bas de la station, où se trouve notre studio.
         </p>
-                  {/*           L'accueil' sur google map:
-           */}
+        {/*           L'accueil' sur google map:
+         */}
         <h3>Les parkings</h3>
         <p>Les parkings sont gratuits en été.</p>
         <p>En hiver:</p>
         <ul>
           <li>
             Parking des Prodains: xx € la semaine.{' '}
-            <a className='link'
+            <a
+              className="link"
               href="https://www.parkingmorzine.com/reservation-parking-prodains.php"
               target="_blank"
               rel="noopener noreferrer"
@@ -252,7 +251,8 @@ export function AccesContent() {
           <li>
             Parkings couverts: 100€ la semaine. Pas de réservation à moins de 3
             jours de l&apos;arrivée.{' '}
-            <a className='link'
+            <a
+              className="link"
               href="https://www.avoriazparkings.com/reservation-parking.html"
               target="_blank"
               rel="noopener noreferrer"
@@ -262,7 +262,8 @@ export function AccesContent() {
           </li>
           <li>
             Parking extérieur: 80€ la semaine. Pas de réservation.{' '}
-            <a className='link'
+            <a
+              className="link"
               href="https://www.avoriazparkings.com/parking-exterieur-avoriaz.html"
               target="_blank"
               rel="noopener noreferrer"
@@ -274,12 +275,11 @@ export function AccesContent() {
       </section>
       <section>
         <h2 id="station">Accéder à Avoriaz</h2>
-        <div className="line-title">
-          <div className="icon-containter">
-            <FaCar />
-          </div>
-          <h3>Venir en voiture</h3>
-        </div>
+
+        <TitleWithIcon
+          title={<h3>Venir en voiture</h3>}
+          icon={<FaCar />}
+        />
         <ul>
           <li>En provenance du Nord de la France, passer par Dijon.</li>
           <li>En provenance du centre et de l&apos;ouest, passer par Lyon.</li>
@@ -296,15 +296,15 @@ export function AccesContent() {
           Taninges, puis direction les Gets, Morzine et enfin Morzine-Les
           Prodains (téléphérique) ou Avoriaz (accueil station).
         </p>
-        <div className="line-title">
-          <div className="icon-containter">
-            <FaTrain />
-          </div>
-          <h3>Venir en train</h3>
-        </div>
+
+        <TitleWithIcon
+          title={<h3>Venir en train</h3>}
+          icon={<FaTrain />}
+        />
         <p>
           Gares TGV de Cluses, de Thonon les Bains ou{' '}
-          <a className='link'
+          <a
+            className="link"
             href="https://www.sbb.ch/fr/informations-voyages/gares/trouver-gare/gare-de-geneve-cornavin.html"
             target="_blank"
             rel="noopener noreferrer"
@@ -321,24 +321,23 @@ export function AccesContent() {
         </p>
         {/*         parler des bus
          */}
-        <div className="line-title">
-          <div className="icon-containter">
-            <FaPlaneDeparture />
-          </div>
-          <h3>Venir en avion</h3>
-        </div>
-        <p>
 
-        Les compagnies Altibus / SAT, Swiss Tours ou Easybus vous transportent
-        de l’
-        <a className='link'
-          href="https://www.gva.ch/fr/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          aéroport international de Genève
-        </a>{' '}
-        à Avoriaz.
+        <TitleWithIcon
+          title={<h3>Venir en avion</h3>}
+          icon={<FaPlaneDeparture />}
+        />
+        <p>
+          Les compagnies Altibus / SAT, Swiss Tours ou Easybus vous transportent
+          de l’
+          <a
+            className="link"
+            href="https://www.gva.ch/fr/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            aéroport international de Genève
+          </a>{' '}
+          à Avoriaz.
         </p>
       </section>
     </>
