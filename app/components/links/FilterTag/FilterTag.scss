@@ -1,0 +1,55 @@
+@use '@/app/styles/variables' as *;
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    button {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 5px;
+        border-color: gray;
+        padding: 0.2rem 0.5rem;
+        transition: all 0.1s ease-in-out;
+
+        /*&:hover {
+       background-color: $primary-color;
+      color: $footer-color; 
+    }*/
+
+        &[data-category='sur place'] {
+            &:hover {
+                border-color: $surplace-dark;
+            }
+            &.selected {
+                background-color: $surplace;
+                border-color: $surplace-dark;
+            }
+        }
+
+        &[data-category='ski'] {
+            &:hover {
+                border-color: $ski-dark;
+            }
+            &.selected {
+                background-color: $ski;
+                border-color: $ski-dark;
+            }
+        }
+
+        &[data-category='trajets'] {
+            &:hover {
+                border-color: $trajets-dark;
+            }
+            &.selected {
+                background-color: $trajets;
+                border-color: $trajets-dark;
+            }
+        }
+    }
+}

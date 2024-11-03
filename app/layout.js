@@ -1,10 +1,8 @@
 import { Header } from './components/Header/Header'
 import { Footer } from './components/Footer/Footer'
-import { Merienda, Raleway } from 'next/font/google'
+import { merienda, raleway } from './styles/fonts'
 import './styles/globals.scss'
 
-const merienda = Merienda({ subsets: ['latin'], variable: '--font-merienda' })
-const raleway = Raleway({ subsets: ['latin'], variable: '--font-raleway' })
 
 export const metadata = {
   title: {
@@ -18,6 +16,7 @@ export const metadata = {
 /*     url: 'https://www.morganeweb.dev/',
  */  },
 }
+
 
 export default function RootLayout({ children }) {
   return (

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import './ButtonLink.scss'
 
-export default function ButtonLink({ href, children, ...props }) {
+export function ButtonLink({ href, children, ...props }) {
   return (
     <Link
       href={href}

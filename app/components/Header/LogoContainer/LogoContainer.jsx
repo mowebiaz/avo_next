@@ -1,7 +1,6 @@
 'use client'
 
 import Link from "next/link";
-import { GiSnowflake1 } from "react-icons/gi";
 import { FaSnowflake } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
 import './LogoContainer.scss'

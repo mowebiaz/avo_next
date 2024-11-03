@@ -1,0 +1,83 @@
+@use '@/app/styles/variables' as *;
+
+.acces {
+    gap: 2rem;
+}
+
+.acces section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+background-color: $footer-color;
+color: $background-color;
+opacity: 0.7;
+scroll-margin-top: 5rem; /* height of sticky header */
+    }
+
+    .line-title {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        line-height: 1.5;
+        .icon-containter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            svg {
+                width: 1.5rem;
+                height: 1.5rem;
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    .tables {
+        margin: 1rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        align-items: flex-start;
+
+        table {
+            &.timetable {
+                max-width: 400px;
+            }
+            border-collapse: collapse;
+            thead {
+                th {
+                    background-color: $secondary-color;
+                    border: 1px solid $footer-color;
+                    padding: 0.4rem;
+                }
+            }
+
+            td {
+                border: 1px solid $footer-color;
+                text-align: center;
+                line-height: 1.2;
+                padding: 0.5rem;
+                span {
+                    font-style: italic;
+                    font-size: 1rem;
+
+                    .definition {
+                        display: block;
+                        padding-top: 0.5rem;
+                        width: max-content;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    ul {
+        list-style-position: inside;
+        list-style-type: square;
+        padding-left: 1rem;
+    }
+}
