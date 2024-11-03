@@ -34,7 +34,7 @@ export function StudioContent() {
           (téléphérique des Prodains) et des remontées mécaniques (Tour, Stade,
           Lac Intrets). Nous sommes situés dans un quartier calme (les
           Hauts-Forts), à 450m du centre et du{' '}
-          <a
+          <a className='link'
             href="https://www.village-des-enfants.com/fr/"
             target="_blank"
             rel="noopener noreferrer"

@@ -19,7 +19,7 @@ export function LocationContent() {
           <div className='icon'>
             <FaUser />
             </div>
-            Premier <Link href="/contact">contact</Link>: merci d&apos;indiquer
+            Premier <Link href="/contact" className='link'>contact</Link>: merci d&apos;indiquer
             la semaine souhaitée, votre e-mail, ainsi que le nombre
             d&apos;adulte(s) et d&apos;enfant(s)(moins de 18 ans).
           </li>
@@ -54,7 +54,7 @@ export function LocationContent() {
           <div className='icon'>
             <FaSnowflake />
             </div>
-            Le chèque de caution est renvoyé dans un délai d'une semaine après
+            Le chèque de caution est renvoyé dans un délai d&apos;une semaine après
             la fin de la location.
           </li>
         </ol>

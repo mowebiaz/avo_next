@@ -241,7 +241,7 @@ export function AccesContent() {
         <ul>
           <li>
             Parking des Prodains: xx € la semaine.{' '}
-            <a
+            <a className='link'
               href="https://www.parkingmorzine.com/reservation-parking-prodains.php"
               target="_blank"
               rel="noopener noreferrer"
@@ -252,7 +252,7 @@ export function AccesContent() {
           <li>
             Parkings couverts: 100€ la semaine. Pas de réservation à moins de 3
             jours de l&apos;arrivée.{' '}
-            <a
+            <a className='link'
               href="https://www.avoriazparkings.com/reservation-parking.html"
               target="_blank"
               rel="noopener noreferrer"
@@ -262,7 +262,7 @@ export function AccesContent() {
           </li>
           <li>
             Parking extérieur: 80€ la semaine. Pas de réservation.{' '}
-            <a
+            <a className='link'
               href="https://www.avoriazparkings.com/parking-exterieur-avoriaz.html"
               target="_blank"
               rel="noopener noreferrer"
@@ -304,7 +304,7 @@ export function AccesContent() {
         </div>
         <p>
           Gares TGV de Cluses, de Thonon les Bains ou{' '}
-          <a
+          <a className='link'
             href="https://www.sbb.ch/fr/informations-voyages/gares/trouver-gare/gare-de-geneve-cornavin.html"
             target="_blank"
             rel="noopener noreferrer"
@@ -331,7 +331,7 @@ export function AccesContent() {
 
         Les compagnies Altibus / SAT, Swiss Tours ou Easybus vous transportent
         de l’
-        <a
+        <a className='link'
           href="https://www.gva.ch/fr/"
           target="_blank"
           rel="noopener noreferrer"
