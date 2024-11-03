@@ -1,0 +1,36 @@
+@use '@/app/styles/variables' as *;
+
+.station-content {
+    display: flex;
+    flex-direction: column;
+    .images {
+        width: 100%;
+        min-height: 40vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Deux colonnes par défaut */
+        gap: 1rem;
+        padding: 1rem;
+        .image-container {
+            height: 40vh;
+            position: relative;
+            .image {
+                object-fit: cover;
+                object-position: center;
+                border-radius: 10px;
+                box-shadow: 0px 0px 6px hsla(0, 0, 0, 0.4);
+            }
+        }
+    }
+}
+
+/* Media query for small screens */
+@media (max-width: $breakpoint-nav) {
+    .station-content {
+        .images {
+            grid-template-columns: 1fr; /* Une seule colonne sur petit écran */
+        .image-container {
+            height: 30vh;
+        }
+        }
+    }
+}

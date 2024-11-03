@@ -15,7 +15,7 @@ export function FilterByCategories() {
     {
       name: 'les Portes du Soleil',
       link: 'https://www.portesdusoleil.com/',
-      category: 'sur place',
+      category: 'ski',
     },
     {
       name: 'ESF Avoriaz',
