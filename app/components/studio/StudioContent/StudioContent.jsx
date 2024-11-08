@@ -1,4 +1,8 @@
+'use client'
+
 import { ButtonLink } from '../../ButtonLink/ButtonLink'
+import { Carousel } from '../../Carousel/Carousel'
+import { slides } from '@/app/lib/slides'
 import './StudioContent.scss'
 
 const equipmentsList = [
@@ -15,6 +19,8 @@ const equipmentsList = [
   'aspirateur',
   'couettes et oreillers',
 ]
+
+
 
 export function StudioContent() {
   return (
@@ -72,7 +78,8 @@ export function StudioContent() {
             <li key={equipment}>{equipment}</li>
           ))}
         </ul>
-      </section>
+         <Carousel slides={slides}/>
+     </section>
       <section className="pricing">
         <h2>Disponibilités et tarifs</h2>
         <p>
