@@ -37,3 +37,34 @@
         }
     }
 }
+
+.swiper-button-prev, .swiper-button-next {
+    width: clamp(30px, 2vw, 100px)  !important;
+    height: clamp(30px, 2vw, 100px)  !important;
+    color: $primary-color !important;
+    background-color: $footer-color !important;
+    border-radius: 50% !important;
+    &::after {
+        font-size: 1rem !important;
+    }
+}
+
+/*2vw pour grand écran
+clamp(30px, 2vw, 100px) 
+*/
+
+.mySwiper {
+    width: 100%; // Valeur par défaut
+
+    @media screen and (min-width: 425px) {
+        width: 80%;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 60%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 50%;
+    }
+}

@@ -11,13 +11,6 @@ export function Carousel({ slides }) {
   return (
     <Swiper
       className="mySwiper"
-      /*    slidesPerView={1}
-  spaceBetween={10}
-  navigation
-  pagination={{ clickable: true }}
-  scrollbar={{ draggable: true }}
-  onSwiper={(swiper) => console.log(swiper)}
-  onSlideChange={() => console.log('slide change')}  */
       spaceBetween={30}
       effect={'fade'}
       navigation={true}
