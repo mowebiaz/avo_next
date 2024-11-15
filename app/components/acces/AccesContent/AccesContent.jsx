@@ -1,3 +1,4 @@
+import { MapGoogle } from '../../mapGoogle/mapGoogle'
 import { TitleWithIcon } from '../../TitleWithIcon/TitleWithIcon'
 import { FaCar, FaPlaneDeparture } from 'react-icons/fa'
 import { FaTrain, FaCableCar } from 'react-icons/fa6'
@@ -19,6 +20,7 @@ export function AccesContent() {
           Notre studio se trouve dans la résidence Pas du Lac (n°41 sur le plan
           de la station).
         </p>
+        <MapGoogle/>
         {/*         google map studio
          */}
         <p>
