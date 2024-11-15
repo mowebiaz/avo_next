@@ -9,8 +9,9 @@
     gap: 1rem;
 
     h1 {
-        /*font-size: 3.5rem;*/
-        font-size: clamp(2rem, 1.135rem + 3.695vw, 3.5rem);
+        /*font-size: clamp(2rem, 1.135rem + 3.695vw, 3.5rem);*/
+        /*font-size:clamp(2rem, 1.424rem + 2.463vw, 3rem);*/
+        font-size:clamp(2rem, 2vw + 1rem, 3rem);
         color: black;
         text-align: center;
         backdrop-filter: blur(10px);
