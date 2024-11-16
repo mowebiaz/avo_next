@@ -9,15 +9,14 @@ const equipmentsList = [
   'wifi gratuit',
   'télévision',
   'lecteur DVD',
-  'frigo - compartiment congélateur',
-  'plaque vitrocéramique',
   'cafetière',
+  'plaque vitrocéramique',
+  'frigo',
   'grille-pain',
   'service à raclette',
   'bouilloire',
   'sèche-cheveux',
   'aspirateur',
-  'couettes et oreillers',
 ]
 
 
