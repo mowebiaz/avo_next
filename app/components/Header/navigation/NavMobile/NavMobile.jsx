@@ -4,6 +4,7 @@ import { useState, useRef } from 'react'
 import { BurgerIcon } from '../../BurgerIcon/BurgerIcon'
 import { routeList } from '../routeList'
 import './NavMobile.scss'
+import { useClickAway } from 'react-use'
 
 export function NavMobile() {
   const [isOpen, setIsOpen] = useState(false)
@@ -13,9 +14,9 @@ export function NavMobile() {
     setIsOpen((prev) => !prev)
   }
 
-  /*   useClickAway(ref, () => {
+  useClickAway(ref, () => {
     setIsOpen(false)
-  }) */
+  })
 
   return (
     <div

@@ -24,7 +24,7 @@
 }
 
 /* Media query for small screens */
-@media (max-width: $breakpoint-nav) {
+@media (max-width: 920px) {
     .station-content {
         .images {
             grid-template-columns: 1fr; /* Une seule colonne sur petit écran */

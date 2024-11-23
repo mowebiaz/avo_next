@@ -1,7 +1,6 @@
 @use '@/app/styles/variables' as *;
 
 .burger-button {
-    border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,11 +8,12 @@
 
 .nav-mobile {
     position: fixed;
+    top: 4rem; /* height of sticky header */
     right: 0;
     width: 100vw;
-    height: 100vh;
-    border: 1px solid blue;
-    background-color: red;
+    padding: 0.5rem 0;
+    background-color: $footer-color;
+
     ul {
         list-style: none;
         display: flex;
@@ -21,12 +21,21 @@
         align-items: center;
         justify-content: center;
         gap: 1rem;
-        border-radius: 8px;
-        border: 1px solid $footer-color;
+        li a {
+            color: $primary-color;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            svg {
+            }
+        }
     }
 }
 
-@media screen and (min-width: calc($breakpoint-nav + 1px)) {
+
+@media screen and (min-width: 769px) {
     .mobile {
         display: none;
     }
