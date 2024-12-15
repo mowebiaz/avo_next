@@ -1,0 +1,68 @@
+@use '@/app/styles/variables' as *;
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    div {
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 5px;
+        padding: 0.2rem 0.5rem;
+        transition: all 0.2s ease-in-out;
+
+        &[data-linkcategory='sur place'] {
+            border-color: $surplace-dark;
+            /*             @media (hover:hover) {
+                &:hover {
+                    background-color: $surplace-light;
+                }
+            } */
+            @media (pointer: fine) {
+                &:hover {
+                    background-color: $surplace-light;
+                }
+            }
+
+            &:active {
+                background-color: $surplace;
+            }
+
+            /*             &:hover {
+                background-color: $surplace-light;
+            }
+            @media (hover: none) {
+                &:hover {
+                    background-color: $background-color;
+                }
+            } */
+        }
+        &[data-linkcategory='ski'] {
+            border-color: $ski-dark;
+            @media (pointer: fine) {
+                &:hover {
+                    background-color: $ski-light;
+                }
+            }
+            &:active {
+                background-color: $ski;
+            }
+        }
+        &[data-linkcategory='trajets'] {
+            border-color: $trajets-dark;
+            @media (pointer: fine) {
+                &:hover {
+                    background-color: $trajets-light;
+                }
+            }
+            &:active {
+                background-color: $trajets;
+            }
+        }
+    }
+
+    a {
+        display: inline-block;
+    }
+}

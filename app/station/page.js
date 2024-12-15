@@ -1,4 +1,4 @@
-import { StationContent } from "@/app/components/station/StationContent/StationContent"
+import { StationContent } from "./StationContent/StationContent"
 
 export const metadata = {
   title: "Station",

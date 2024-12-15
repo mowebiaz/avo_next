@@ -1,4 +1,4 @@
-import { FilterByCategories } from "../../components/links/FilterByCategories/FilterByCategories"
+import { FilterByCategories } from "./FilterByCategories/FilterByCategories"
 
 export const metadata = {
   title: "Liens",

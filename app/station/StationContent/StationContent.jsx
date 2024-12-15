@@ -1,4 +1,4 @@
-import { TitleWithIcon } from '../../TitleWithIcon/TitleWithIcon'
+import { TitleWithIcon } from '../../components/TitleWithIcon/TitleWithIcon'
 import Summer from '@/public/images/avoriaz-summer.webp'
 import Winter from '@/public/images/avoriaz-winter.webp'
 import { TbSnowflake } from 'react-icons/tb'

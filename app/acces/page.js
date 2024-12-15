@@ -1,5 +1,5 @@
-import { ButtonsContainer } from "@/app/components/acces/ButtonsContainer/ButtonsContainer"
-import { AccesContent } from "@/app/components/acces/AccesContent/AccesContent"
+import { ButtonsContainer } from "@/app/acces/ButtonsContainer/ButtonsContainer"
+import { AccesContent } from "@/app/acces/AccesContent/AccesContent"
 
 export const metadata = {
   title: "Accès",

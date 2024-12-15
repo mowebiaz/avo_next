@@ -1,8 +1,8 @@
 'use client'
 
-import { ButtonLink } from '../../ButtonLink/ButtonLink'
-import { Carousel } from '../../Carousel/Carousel'
-import { slides } from '@/app/lib/slides'
+import { ButtonLink } from '../../components/ButtonLink/ButtonLink'
+import { Carousel } from '../../components/Carousel/Carousel'
+import { slides } from '../../lib/slides'
 import './StudioContent.scss'
 
 const equipmentsList = [

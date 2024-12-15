@@ -98,14 +98,22 @@ a.link {
     text-underline-offset: 3px;
     padding: 5px;
     transition: all 200ms ease-in-out;
-
-    &:hover {
+    @media (pointer: fine) {
+      &:hover {
+          background-color: $secondary-color;
+          color: $footer-color;
+          color: black;
+          border-radius: 5px;
+          text-decoration: none;
+      }
+    }
+    &:active {
         background-color: $secondary-color;
         color: $footer-color;
-        color: black;
         border-radius: 5px;
         text-decoration: none;
     }
+
 }
 
 button:hover {

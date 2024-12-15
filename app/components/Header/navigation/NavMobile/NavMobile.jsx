@@ -3,8 +3,9 @@
 import { useState, useRef } from 'react'
 import { BurgerIcon } from '../../BurgerIcon/BurgerIcon'
 import { routeList } from '../routeList'
-import './NavMobile.scss'
+import { ActiveLink } from '../NavDestkop/ActiveLink/ActiveLink'
 import { useClickAway } from 'react-use'
+import './NavMobile.scss'
 
 export function NavMobile() {
   const [isOpen, setIsOpen] = useState(false)
@@ -44,6 +45,9 @@ export function NavMobile() {
               return (
                 <li key={route.name}>
                   <a href={route.path}>{route.icon}{route.name}</a>
+{/*                   <ActiveLink key={route.name} href={route.path} activeClassName="active">
+                {route.name}
+              </ActiveLink> */}
                 </li>
               )
             })}

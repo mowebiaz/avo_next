@@ -1,4 +1,4 @@
-import { StudioContent } from '../../components/studio/StudioContent/StudioContent'
+import { StudioContent } from './StudioContent/StudioContent'
 
 export const metadata = {
   title: "Studio",

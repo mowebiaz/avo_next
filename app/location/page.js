@@ -1,4 +1,4 @@
-import { LocationContent } from '../../components/location/LocationContent/LocationContent'
+import { LocationContent } from './LocationContent/LocationContent'
 
 export const metadata = {
   title: "Location",

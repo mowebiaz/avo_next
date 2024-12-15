@@ -1,5 +1,5 @@
-import { MapGoogle } from '../../mapGoogle/mapGoogle'
-import { TitleWithIcon } from '../../TitleWithIcon/TitleWithIcon'
+import { MapGoogle } from '../../components/mapGoogle/mapGoogle'
+import { TitleWithIcon } from '../../components/TitleWithIcon/TitleWithIcon'
 import { FaCar, FaPlaneDeparture } from 'react-icons/fa'
 import { FaTrain, FaCableCar } from 'react-icons/fa6'
 import { MdHomeWork } from 'react-icons/md'

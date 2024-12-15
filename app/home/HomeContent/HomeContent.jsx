@@ -1,4 +1,4 @@
-import { ButtonLink } from '../../ButtonLink/ButtonLink'
+import { ButtonLink } from '../../components/ButtonLink/ButtonLink'
 import './HomeContent.scss'
 
 export function HomeContent() {
