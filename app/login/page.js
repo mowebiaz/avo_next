@@ -5,6 +5,8 @@ import { useRouter } from 'next/navigation'
 import { useAuth } from '../context/AuthContext'
 import { LoginForm } from './LoginForm/LoginForm'
 import { login } from '../lib/firebase/auth/login'
+import { UserMessage } from '../components/UserMessage/UserMessage'
+import { IoAlertOutline, IoClose } from 'react-icons/io5'
 
 export default function Login() {
   const [error, setError] = useState(null)
@@ -16,7 +18,7 @@ export default function Login() {
       await login(email, password)
     } catch (error) {
       console.error(error)
-      setError(error.message)
+      setError(error)
     }
   }
 
@@ -27,9 +29,21 @@ export default function Login() {
   return (
     <main>
       <h1>Connexion</h1>
+      <UserMessage className={'message-alert'}>
+        <div className="message-alert-icon">
+          <IoAlertOutline />
+        </div>
+        <p>Cette page est privée. Seul l&apos;administrateur peut y accéder.</p>
+      </UserMessage>
       <LoginForm onLogin={handleLogin} />
-      {error && <p>{error.message}</p>}
-      {user && <p>Connecté en tant que {user.email}</p>}
+      {error && (
+        <UserMessage className={'message-error'}>
+          <div className="message-error-icon">
+            <IoClose />
+          </div>
+          <p>{error.message}</p>
+        </UserMessage>
+      )}
     </main>
   )
 }

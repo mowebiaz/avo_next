@@ -10,7 +10,7 @@ export async function login(email, password) {
     )
     return userCredential.user
   } catch (error) {
-    throw new Error(error.message)
+    throw new Error('email et/ou mot de passe incorrect')
     console.log(error.message)
   }
 }
