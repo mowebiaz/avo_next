@@ -28,8 +28,9 @@ export default function Admin() {
         <>
           <button onClick={logout}>Logout</button>
           <div>
-            <p>Connect en tant que {user.email}</p>
-            {/* <AdminPriceTable /> */}
+            <p>Connecté en tant que {user.email}</p>
+            <AdminPriceTable />
+            {/* TODO: ajouter une semaine */}
           </div>
         </>
       </main>

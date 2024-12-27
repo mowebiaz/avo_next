@@ -1,13 +1,39 @@
 'use client'
 
-import { use, useState } from "react"
+import { useEffect, useState } from 'react'
+import { addDaysToDate } from '../../lib/utils/date'
+import { db } from '@/app/lib/firebase/config'
+import { collection, getDocs } from 'firebase/firestore'
+import { updateDispo } from '@/app/lib/firebase/firestore'
+import { ButtonSwitch } from '@/app/components/ButtonSwitch/ButtonSwitch'
 
 export function AdminPriceTable() {
   const [weekList, setWeekList] = useState([])
 
   useEffect(() => {
-
+    const fetchWeekList = async () => {
+      const weeksCollection = collection(db, 'weeks')
+      const weeksSnapshot = await getDocs(weeksCollection)
+      const data = weeksSnapshot.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }))
+      setWeekList(data)
+    }
+    fetchWeekList()
   }, [])
+
+  const toggleDispo = (id, newDispo) => {
+    updateDispo(id, newDispo)
+    setWeekList((prevWeekList) =>
+      prevWeekList.map((week) => {
+        if (week.id === id) {
+          return { ...week, dispo: newDispo }
+        }
+        return week
+      })
+    )
+  }
 
   return (
     <div className="price-table">
@@ -32,7 +58,14 @@ export function AdminPriceTable() {
               </td>
               <td>{addDaysToDate(week.entryDate.toDate())}</td>
               <td>{week.price}</td>
-              <td>{week.dispo ? 'Oui' : 'Non'}</td>
+
+              <td>
+                <ButtonSwitch
+                  id={'btn-dispo-' + week.id}
+                  isChecked={week.dispo}
+                  onToggle={(newDispo) => toggleDispo(week.id, newDispo)}
+                />
+              </td>
             </tr>
           ))}
         </tbody>
