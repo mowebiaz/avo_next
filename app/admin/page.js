@@ -1,15 +1,17 @@
 'use client'
 
-import { useEffect } from 'react'
+import { use, useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '../context/AuthContext'
 import { logout } from '../lib/firebase/auth/logout'
 import { AdminPriceTable} from './AdminPriceTable/AdminPriceTable'
+import { AddWeekForm } from './AddWeekForm/AddWeekForm'
 
 
 export default function Admin() {
   const { user, loading } = useAuth()
   const router = useRouter()
+  const formRef = useRef(null)
 
   useEffect(() => {
     if (!loading && !user) {
@@ -21,16 +23,22 @@ export default function Admin() {
     return <p>Loading...</p>
   }
 
+  const handleClick = () => {
+    formRef.current.style.display = 'flex'
+  }
+
   if (user) {
     return (
       <main>
         <h1>Admin</h1>
         <>
           <button onClick={logout}>Logout</button>
-          <div>
-            <p>Connecté en tant que {user.email}</p>
             <AdminPriceTable />
-            {/* TODO: ajouter une semaine */}
+          <div>
+            <button onClick={handleClick}>Ajouter une semaine</button>
+          </div>
+          <div ref={formRef} className='div-form' style={{ display: 'none' }}>
+            <AddWeekForm />
           </div>
         </>
       </main>

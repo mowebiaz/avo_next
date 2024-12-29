@@ -1,6 +1,7 @@
 import { db } from './config'
 import { collection, getDocs, doc, updateDoc } from 'firebase/firestore'
 
+/* voir const unsubscribe */
 export async function getWeeks() {
   const weeksCollection = collection(db, 'weeks')
   const weeksSnapshot = await getDocs(weeksCollection)

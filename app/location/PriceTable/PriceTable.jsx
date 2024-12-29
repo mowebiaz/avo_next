@@ -5,14 +5,16 @@ import './PriceTable.scss'
 export async function PriceTable() {
   const weeks = await getWeeks()
   return (
-    <div >
+    <div>
       <table className="price-table">
         <thead>
-          <tr colspan="3">Hiver 2024-2025</tr>
           <tr>
-            <th>Arrivée</th>
-            <th>Départ</th>
-            <th>Prix</th>
+            <th colSpan={3}>Hiver 2024-2025</th>
+          </tr>
+          <tr>
+            {['Arrivée', 'Départ', 'Prix'].map((header, index) => (
+              <th key={index}>{header}</th>
+            ))}
           </tr>
         </thead>
         <tbody>

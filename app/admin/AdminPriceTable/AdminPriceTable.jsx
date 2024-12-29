@@ -40,10 +40,11 @@ export function AdminPriceTable() {
       <table>
         <thead>
           <tr>
-            <th>Arrivée</th>
-            <th>Départ</th>
-            <th>Prix</th>
-            <th>Disponibilité</th>
+            {['Arrivée', 'Départ', 'Prix', 'Disponibilité'].map(
+              (header, index) => (
+                <th key={index}>{header}</th>
+              )
+            )}
           </tr>
         </thead>
         <tbody>
