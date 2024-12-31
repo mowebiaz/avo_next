@@ -6,10 +6,12 @@ import { db } from '@/app/lib/firebase/config'
 import { collection, getDocs } from 'firebase/firestore'
 import { updateDispo } from '@/app/lib/firebase/firestore'
 import { ButtonSwitch } from '@/app/components/ButtonSwitch/ButtonSwitch'
+import './AdminPriceTable.scss'
 
 export function AdminPriceTable() {
   const [weekList, setWeekList] = useState([])
 
+  /* Voir const unsubscribe */
   useEffect(() => {
     const fetchWeekList = async () => {
       const weeksCollection = collection(db, 'weeks')

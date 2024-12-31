@@ -1,0 +1,22 @@
+.admin {
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .new-week {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            gap: 1rem;
+            border: 1px solid black;
+            div {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                input[type='checkbox'] {
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
