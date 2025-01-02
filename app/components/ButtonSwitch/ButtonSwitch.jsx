@@ -3,13 +3,10 @@
 import { useState } from 'react'
 import './ButtonSwitch.scss'
 
-export function ButtonSwitch({id, isChecked, onToggle}) {
-
-   const handleCheck = () => {
+export function ButtonSwitch({ id, isChecked, onToggle }) {
+  const handleCheck = () => {
     onToggle(!isChecked)
-  } 
-
-
+  }
 
   return (
     <label
@@ -24,8 +21,11 @@ export function ButtonSwitch({id, isChecked, onToggle}) {
         checked={isChecked}
         onChange={handleCheck}
       />
-      {isChecked ? <span className="on">disponible</span> : <span className="off">réservé</span>}
-
+      {isChecked ? (
+        <span className="on">disponible</span>
+      ) : (
+        <span className="off">réservé</span>
+      )}
     </label>
   )
 }

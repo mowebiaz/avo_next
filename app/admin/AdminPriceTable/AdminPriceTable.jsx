@@ -1,47 +1,58 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { collection, onSnapshot } from 'firebase/firestore'
 import { addDaysToDate } from '../../lib/utils/date'
 import { db } from '@/app/lib/firebase/config'
-import { collection, getDocs, onSnapshot } from 'firebase/firestore'
-import { updateDispo } from '@/app/lib/firebase/firestore'
+import { deleteMutlipleWeeks, updateDispo } from '@/app/lib/firebase/firestore'
 import { ButtonSwitch } from '@/app/components/ButtonSwitch/ButtonSwitch'
-import { AddWeekForm } from '../AddWeekForm/AddWeekForm'
 import './AdminPriceTable.scss'
 
 export function AdminPriceTable() {
   const [weekList, setWeekList] = useState([])
+  const [weeksToDelete, setWeeksToDelete] = useState([])
 
   useEffect(() => {
-    const weeksCollection = collection(db, 'weeks');
+    const weeksCollection = collection(db, 'weeks')
 
     // Real time listener
     const unsubscribe = onSnapshot(weeksCollection, (snapshot) => {
       const data = snapshot.docs.map((doc) => ({
         ...doc.data(),
         id: doc.id,
-      }));
-      setWeekList(data); 
-    });
+      }))
+      setWeekList(data)
+    })
 
-    return () => unsubscribe();
+    return () => unsubscribe()
   }, [])
 
   const toggleDispo = (id, newDispo) => {
     updateDispo(id, newDispo)
-    setWeekList((prevWeekList) =>
-      prevWeekList.map((week) => {
-        if (week.id === id) {
-          return { ...week, dispo: newDispo }
-        }
-        return week
-      })
-    )
+  }
+
+  const handleCheck = (id) => {
+    if (!weeksToDelete.includes(id)) {
+      setWeeksToDelete((prevWeeksToDelete) => [...prevWeeksToDelete, id])
+    } else {
+      setWeeksToDelete((prevWeeksToDelete) =>
+        prevWeeksToDelete.filter((weekId) => weekId !== id)
+      )
+    }
+  }
+
+  const deleteWeeks = async () => {
+    try {
+      await deleteMutlipleWeeks(weeksToDelete)
+      setWeeksToDelete([])
+    } catch (error) {
+      console.log('erreur', error)
+    }
   }
 
   return (
     <>
-      <div className='admin-table-container'>
+      <div className="admin-table-container">
         <table className="admin-table">
           <thead>
             <tr>
@@ -50,6 +61,9 @@ export function AdminPriceTable() {
                   <th key={index}>{header}</th>
                 )
               )}
+              <th key="btn-delete">
+                <button onClick={deleteWeeks}>trash</button>
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -71,6 +85,16 @@ export function AdminPriceTable() {
                     isChecked={week.dispo}
                     onToggle={(newDispo) => toggleDispo(week.id, newDispo)}
                   />
+                </td>
+                <td>
+                  <label htmlFor={'btn-delete-' + week.id}>
+                    <input
+                      type="checkbox"
+                      name={'btn-delete-' + week.id}
+                      id={'btn-delete-' + week.id}
+                      onChange={() => handleCheck(week.id)}
+                    />
+                  </label>
                 </td>
               </tr>
             ))}

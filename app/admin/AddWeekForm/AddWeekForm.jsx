@@ -1,8 +1,8 @@
-import { useFieldArray, useForm } from 'react-hook-form'
 import { useRef } from 'react'
+import { useFieldArray, useForm } from 'react-hook-form'
+import { Timestamp } from 'firebase/firestore'
 import { addMultipleWeeks } from '@/app/lib/firebase/firestore'
 import './AddWeekForm.scss'
-import { Timestamp } from 'firebase/firestore'
 
 export function AddWeekForm() {
   const formRef = useRef(null)
@@ -39,7 +39,6 @@ export function AddWeekForm() {
       entryDate: Timestamp.fromDate(new Date(week.entryDate)),
       price: Number(week.price),
     }))
-    console.log('formatedWeeksList', formatedWeeksList)
     try {
       await addMultipleWeeks(formatedWeeksList)
       formRef.current.style.display = 'none'

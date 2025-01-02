@@ -4,7 +4,6 @@ import {
   getDocs,
   doc,
   updateDoc,
-  Timestamp,
   writeBatch,
 } from 'firebase/firestore'
 
@@ -43,9 +42,19 @@ export async function addMultipleWeeks(weeksList) {
 
   weeksList.forEach((week) => {
     const weekData = {...week}
-    const docRef = doc(collection(db, 'weeks'))
-    batch.set(docRef, weekData)
-    console.log('weekData',weekData)
+    const collectionRef = doc(collection(db, 'weeks'))
+    batch.set(collectionRef, weekData)
+  })
+
+  await batch.commit()
+}
+
+export async function deleteMutlipleWeeks(weeksListId) {
+  const batch = writeBatch(db)
+
+  weeksListId.forEach((id) => {
+    const docRef = doc(db, 'weeks', id)
+    batch.delete(docRef)
   })
 
   await batch.commit()
