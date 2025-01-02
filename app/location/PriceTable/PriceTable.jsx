@@ -19,7 +19,7 @@ export async function PriceTable() {
         </thead>
         <tbody>
           {weeks.map((week) => (
-            <tr key={week.id}>
+            <tr key={week.id} className={week.dispo ? '' : 'booked'}>
               <td>
                 {week.entryDate.toDate().toLocaleDateString('fr-FR', {
                   weekday: 'long',

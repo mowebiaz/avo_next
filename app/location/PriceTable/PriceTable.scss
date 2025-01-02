@@ -12,4 +12,7 @@ table.price-table {
         border: 1px solid $footer-color;
         text-align: center;
     }
+    tr.booked {
+        background-color: lightgrey;
+    }
 }

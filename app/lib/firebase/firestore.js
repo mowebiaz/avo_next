@@ -8,7 +8,6 @@ import {
   writeBatch,
 } from 'firebase/firestore'
 
-
 /* voir const unsubscribe */
 export async function getWeeks() {
   const weeksCollection = collection(db, 'weeks')
@@ -26,18 +25,27 @@ export async function updateDispo(id, newDispo) {
   }
 }
 
+/* export async function addMultipleWeeks(weeksList) {
+  const batch = writeBatch(db)
+
+  weeksList.forEach((week) => {
+    const weekData = { ...week }
+    const docRef = doc(collection(db, 'weeks'))
+    batch.set(docRef, weekData)
+    console.log(weekData)
+  })
+
+  await batch.commit()
+} */
+
 export async function addMultipleWeeks(weeksList) {
   const batch = writeBatch(db)
 
   weeksList.forEach((week) => {
-    const weekData = {
-      ...week,
-      entryDate: Timestamp.fromDate(new Date(week.entryDate)),
-      price: Number(week.price),
-    }
-    console.log(weeksList)
+    const weekData = {...week}
     const docRef = doc(collection(db, 'weeks'))
     batch.set(docRef, weekData)
+    console.log('weekData',weekData)
   })
 
   await batch.commit()

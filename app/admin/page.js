@@ -1,6 +1,6 @@
 'use client'
 
-import { use, useEffect } from 'react'
+import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '../context/AuthContext'
 import { logout } from '../lib/firebase/auth/logout'
@@ -28,7 +28,7 @@ export default function Admin() {
         <>
           <button onClick={logout}>Logout</button>
           <AdminPriceTable />
-          <AddWeekForm />
+          <AddWeekForm/>
         </>
       </main>
     )

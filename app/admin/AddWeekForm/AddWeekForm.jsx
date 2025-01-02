@@ -2,6 +2,7 @@ import { useFieldArray, useForm } from 'react-hook-form'
 import { useRef } from 'react'
 import { addMultipleWeeks } from '@/app/lib/firebase/firestore'
 import './AddWeekForm.scss'
+import { Timestamp } from 'firebase/firestore'
 
 export function AddWeekForm() {
   const formRef = useRef(null)
@@ -29,19 +30,25 @@ export function AddWeekForm() {
     name: 'newWeek',
   })
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
+    // transform data to List
+    const weeksList = data.newWeek
+    // Format list for firestore
+    const formatedWeeksList = weeksList.map((week) => ({
+      ...week,
+      entryDate: Timestamp.fromDate(new Date(week.entryDate)),
+      price: Number(week.price),
+    }))
+    console.log('formatedWeeksList', formatedWeeksList)
     try {
-      addMultipleWeeks(data.newWeek)
-      /*      si succès (isSubmitSuccessful)
-afficher un message de confirmation
-     masquer le formulaire 
-     réafficher le bouton
-     mettre à jour le tableau AdminPriceTable*/
-      }
-
-     catch (error) {
-      setError('addWeekError', error)
-      /*si echec, afficher un message d'erreur */
+      await addMultipleWeeks(formatedWeeksList)
+      formRef.current.style.display = 'none'
+      btnFormRef.current.style.display = 'flex'
+            /*      si succès (isSubmitSuccessful)
+      afficher un message de confirmation*/
+    } catch (error) {
+      console.log(error)
+            /*si echec, afficher un message d'erreur */
     }
   }
 
@@ -101,9 +108,7 @@ afficher un message de confirmation
           <button
             type="button"
             disabled={isSubtmitting}
-            onClick={() =>
-              append({ entryDate: '', dispo: false, price: '' })
-            }
+            onClick={() => append({ entryDate: '', dispo: false, price: '' })}
           >
             ++++
           </button>
