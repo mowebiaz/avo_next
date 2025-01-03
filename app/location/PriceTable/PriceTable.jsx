@@ -7,10 +7,11 @@ export async function PriceTable() {
   return (
     <div>
       <table className="price-table">
+          <caption>Hiver 2024-2025</caption>
         <thead>
-          <tr>
+{/*           <tr>
             <th colSpan={3}>Hiver 2024-2025</th>
-          </tr>
+          </tr> */}
           <tr>
             {['Arrivée', 'Départ', 'Prix'].map((header, index) => (
               <th key={index}>{header}</th>

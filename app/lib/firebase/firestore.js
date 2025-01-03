@@ -5,12 +5,15 @@ import {
   doc,
   updateDoc,
   writeBatch,
+  query,
+  orderBy,
 } from 'firebase/firestore'
 
 /* voir const unsubscribe */
 export async function getWeeks() {
   const weeksCollection = collection(db, 'weeks')
-  const weeksSnapshot = await getDocs(weeksCollection)
+  const q = query(weeksCollection, orderBy('entryDate', 'asc'))
+  const weeksSnapshot = await getDocs(q)
   const weeks = weeksSnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
   return weeks
 }
@@ -24,24 +27,11 @@ export async function updateDispo(id, newDispo) {
   }
 }
 
-/* export async function addMultipleWeeks(weeksList) {
-  const batch = writeBatch(db)
-
-  weeksList.forEach((week) => {
-    const weekData = { ...week }
-    const docRef = doc(collection(db, 'weeks'))
-    batch.set(docRef, weekData)
-    console.log(weekData)
-  })
-
-  await batch.commit()
-} */
-
 export async function addMultipleWeeks(weeksList) {
   const batch = writeBatch(db)
 
   weeksList.forEach((week) => {
-    const weekData = {...week}
+    const weekData = { ...week }
     const collectionRef = doc(collection(db, 'weeks'))
     batch.set(collectionRef, weekData)
   })

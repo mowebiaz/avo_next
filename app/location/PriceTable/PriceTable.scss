@@ -3,6 +3,9 @@
 table.price-table {
     width: 100%;
     border-collapse: collapse;
+    caption {
+        text-align: left;
+    }
     thead th {
         background-color: $secondary-color;
         border: 1px solid $footer-color;

@@ -1,5 +1,9 @@
+@use '@/app/styles/variables' as *;
+
+
 .admin {
     form {
+        margin-top: 1rem;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
@@ -7,9 +11,12 @@
             display: flex;
             width: 100%;
             justify-content: space-between;
+            border-radius: 10px;
+            padding: 0.5rem;
             gap: 1rem;
             border: 1px solid black;
             div {
+                border: 1px solid red;
                 display: flex;
                 flex-direction: column;
                 height: 100%;
@@ -17,6 +24,11 @@
                     margin: auto;
                 }
             }
+        }
+        .btn-add svg{
+            width: 2rem;
+            height: 2rem;
+            fill: $footer-color;;
         }
     }
 }
