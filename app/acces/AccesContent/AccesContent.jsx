@@ -1,4 +1,5 @@
 import { MapGoogle } from '../../components/mapGoogle/mapGoogle'
+import { LinkAria } from '@/app/components/LinkAria/LinkAria'
 import { TitleWithIcon } from '../../components/TitleWithIcon/TitleWithIcon'
 import { FaCar, FaPlaneDeparture } from 'react-icons/fa'
 import { FaTrain, FaCableCar } from 'react-icons/fa6'
@@ -239,37 +240,37 @@ export function AccesContent() {
         <ul>
           <li>
             Parking des Prodains: 208€ la semaine.{' '}
-            <a
+            <LinkAria
               className="link"
-              href="https://www.parkingmorzine.com/reservation-parking-prodains.php"
+              href={"https://www.parkingmorzine.com/reservation-parking-prodains.php"}
               target="_blank"
-              rel="noopener noreferrer"
+              referrerPolicy='no-opener no-referrer'
             >
               Réserver
-            </a>
+            </LinkAria>
           </li>
           <li>
             Parkings couverts: 100€ la semaine. Pas de réservation à moins de 3
             jours de l&apos;arrivée.{' '}
-            <a
+            <LinkAria
               className="link"
-              href="https://www.avoriazparkings.com/reservation-parking.html"
+              href={"https://www.avoriazparkings.com/reservation-parking.html"}
               target="_blank"
-              rel="noopener noreferrer"
+              referrerPolicy='no-opener no-referrer'
             >
               Réserver
-            </a>
+            </LinkAria>
           </li>
           <li>
             Parking extérieur: 80€ la semaine. Pas de réservation.{' '}
-            <a
+            <LinkAria
               className="link"
-              href="https://www.avoriazparkings.com/parking-exterieur-avoriaz.html"
+              href={"https://www.avoriazparkings.com/parking-exterieur-avoriaz.html"}
               target="_blank"
-              rel="noopener noreferrer"
+              referrerPolicy='no-opener no-referrer'
             >
               Voir
-            </a>
+            </LinkAria>
           </li>
         </ul>
       </section>
@@ -303,14 +304,14 @@ export function AccesContent() {
         />
         <p>
           Gares TGV de Cluses, de Thonon les Bains ou{' '}
-          <a
+          <LinkAria
             className="link"
-            href="https://www.sbb.ch/fr/informations-voyages/gares/trouver-gare/gare-de-geneve-cornavin.html"
+            href={"https://www.sbb.ch/fr/informations-voyages/gares/trouver-gare/gare-de-geneve-cornavin.html"}
             target="_blank"
-            rel="noopener noreferrer"
+            referrerPolicy='no-opener no-referrer'
           >
             gare internationale de Genève
-          </a>
+          </LinkAria>
           .
         </p>
         <p>Le TGV Lyria relie Paris à Genève en 3h11.</p>
@@ -329,14 +330,14 @@ export function AccesContent() {
         <p>
           Les compagnies Altibus / SAT, Swiss Tours ou Easybus vous transportent
           de l’
-          <a
+          <LinkAria
             className="link"
-            href="https://www.gva.ch/fr/"
+            href={"https://www.gva.ch/fr/"}
             target="_blank"
-            rel="noopener noreferrer"
+            referrerPolicy='no-opener no-referrer'
           >
             aéroport international de Genève
-          </a>{' '}
+          </LinkAria>{' '}
           à Avoriaz.
         </p>
       </section>

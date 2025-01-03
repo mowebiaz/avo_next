@@ -1,5 +1,6 @@
 'use client'
 
+import { LinkAria } from '@/app/components/LinkAria/LinkAria'
 import { ButtonLink } from '../../components/ButtonLink/ButtonLink'
 import { Carousel } from '../../components/Carousel/Carousel'
 import { slides } from '../../lib/slides'
@@ -19,8 +20,6 @@ const equipmentsList = [
   'aspirateur',
 ]
 
-
-
 export function StudioContent() {
   return (
     <div className="studio-content">
@@ -39,22 +38,21 @@ export function StudioContent() {
           (téléphérique des Prodains) et des remontées mécaniques (Tour, Stade,
           Lac Intrets). Nous sommes situés dans un quartier calme (les
           Hauts-Forts), à 450m du centre et du{' '}
-          <a className='link'
-            href="https://www.village-des-enfants.com/fr/"
+          <LinkAria
+            className="link"
+            href={"https://www.village-des-enfants.com/fr/"}
             target="_blank"
-            rel="noopener noreferrer"
+            referrerPolicy='no-opener no-referrer'
           >
             village des enfants
-          </a>
+          </LinkAria>
           . Deux entrées sont possibles dans la résidence: au 10<sup>ème</sup>{' '}
           pour un accès à l&apos;ascenseur public et le centre station, ou au
           RdC pour un accès direct aux pistes.
         </p>
-        {/*         TODO: photo le pas du lac
-         */}
-        <ButtonLink href="/acces#studio">Comment accéder au studio ?</ButtonLink>
-        {/*       TODO: Localisation interactive
-         */}
+        <ButtonLink href="/acces#studio">
+          Comment accéder au studio ?
+        </ButtonLink>
       </section>
       <section className="equipments">
         <h2>Un studio tout équipé pour un séjour confortable</h2>
@@ -77,8 +75,8 @@ export function StudioContent() {
             <li key={equipment}>{equipment}</li>
           ))}
         </ul>
-         <Carousel slides={slides}/>
-     </section>
+        <Carousel slides={slides} />
+      </section>
       <section className="pricing">
         <h2>Disponibilités et tarifs</h2>
         <p>
@@ -88,8 +86,6 @@ export function StudioContent() {
           .
         </p>
       </section>
-      {/*       TODO: slider
-       */}{' '}
     </div>
   )
 }

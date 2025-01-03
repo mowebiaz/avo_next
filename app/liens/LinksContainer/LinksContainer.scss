@@ -5,7 +5,8 @@
     flex-wrap: wrap;
     gap: 1rem;
     padding: 2rem;
-    div {
+
+    .card {
         border-width: 1px;
         border-style: solid;
         border-radius: 5px;
@@ -14,55 +15,30 @@
 
         &[data-linkcategory='sur place'] {
             border-color: $surplace-dark;
-            /*             @media (hover:hover) {
-                &:hover {
-                    background-color: $surplace-light;
-                }
-            } */
-            @media (pointer: fine) {
-                &:hover {
-                    background-color: $surplace-light;
-                }
-            }
-
-            &:active {
-                background-color: $surplace;
-            }
-
-            /*             &:hover {
+            &[data-hovered] {
                 background-color: $surplace-light;
             }
-            @media (hover: none) {
-                &:hover {
-                    background-color: $background-color;
-                }
-            } */
+            &[data-pressed] {
+                background-color: $surplace;
+            }
         }
         &[data-linkcategory='ski'] {
             border-color: $ski-dark;
-            @media (pointer: fine) {
-                &:hover {
-                    background-color: $ski-light;
-                }
+            &[data-hovered] {
+                background-color: $ski-light;
             }
-            &:active {
+            &[data-pressed] {
                 background-color: $ski;
             }
         }
         &[data-linkcategory='trajets'] {
             border-color: $trajets-dark;
-            @media (pointer: fine) {
-                &:hover {
-                    background-color: $trajets-light;
-                }
+            &[data-hovered] {
+                background-color: $trajets-light;
             }
-            &:active {
+            &[data-pressed] {
                 background-color: $trajets;
             }
         }
-    }
-
-    a {
-        display: inline-block;
     }
 }

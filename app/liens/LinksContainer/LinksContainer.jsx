@@ -1,3 +1,4 @@
+import { LinkAria } from '@/app/components/LinkAria/LinkAria'
 import './LinksContainer.scss'
 
 export function LinksContainer({ links, selectedCategories }) {
@@ -6,16 +7,17 @@ export function LinksContainer({ links, selectedCategories }) {
       {links
         .filter((link) => selectedCategories.includes(link.category))
         .map((link) => (
-          <div key={link.name} data-linkcategory={link.category}>
-            <a
+          //<div key={link.name} data-linkcategory={link.category}>
+            <LinkAria
+            key={link.name} data-linkcategory={link.category}
               href={link.link}
               className="card"
               target="_blank"
-              rel="noreferrer"
+              referrerPolicy='no-opener no-referrer'
             >
               {link.name}
-            </a>
-          </div>
+            </LinkAria>
+          //</div>
         ))}
     </div>
   )

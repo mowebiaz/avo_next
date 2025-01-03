@@ -1,0 +1,17 @@
+@use '../../styles/variables' as *;
+
+.link {
+    background-color: transparent;
+    text-decoration: underline dotted $footer-color 2px;
+    text-underline-offset: 3px;
+    padding: 5px;
+    transition: all 200ms ease-in-out;
+    &[data-hovered],
+    &[data-pressed] {
+        background-color: $secondary-color;
+        color: $footer-color;
+        color: black;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+}

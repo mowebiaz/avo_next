@@ -1,10 +1,11 @@
+import Image from 'next/image'
+import { LinkAria } from '../../components/LinkAria/LinkAria'
 import { TitleWithIcon } from '../../components/TitleWithIcon/TitleWithIcon'
 import Summer from '@/public/images/avoriaz-summer.webp'
 import Winter from '@/public/images/avoriaz-winter.webp'
 import { TbSnowflake } from 'react-icons/tb'
 import { IoIosSunny } from 'react-icons/io'
 import './StationContent.scss'
-import Image from 'next/image'
 
 export function StationContent() {
   return (
@@ -30,14 +31,14 @@ export function StationContent() {
           En hiver, Avoriaz propose des activités pour tous les goûts : ski de
           piste, ski de randonnée, snowboard, randonnées en raquettes, scooter
           des neiges. Le domaine skiable franco-suisse des{' '}
-          <a
+          <LinkAria
             className="link"
-            href="https://www.portesdusoleil.com/"
+            href={"https://www.portesdusoleil.com/"}
             target="_blank"
-            rel="noopener noreferrer"
+            referrerPolicy='no-opener no-referrer'
           >
             Portes du Soleil
-          </a>
+          </LinkAria>
           , le plus grand domaine skiable des Alpes, offre 600 km de pistes pour
           des skieurs de tous niveaux, du débutant au confirmé. Plusieurs
           évènements ponctuent la saison comme le festival Rock the Pistes.
@@ -50,14 +51,14 @@ export function StationContent() {
         />
         <p>
           VTT, via-ferrata, randonnée, parapente, rafting,{' '}
-          <a
+          <LinkAria
             className="link"
-            href="https://www.avoriaz.com/activites-ete/golf-d-avoriaz/golf/"
+            href={"https://www.avoriaz.com/activites-ete/golf-d-avoriaz/golf/"}
             target="_blank"
-            rel="noopener noreferrer"
+            referrerPolicy='no-opener no-referrer'
           >
             golf
-          </a>
+          </LinkAria>
           , tennis, pétanque.
         </p>
         <p>
