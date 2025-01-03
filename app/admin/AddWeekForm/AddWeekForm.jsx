@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { useFieldArray, useForm } from 'react-hook-form'
 import { Timestamp } from 'firebase/firestore'
 import { addMultipleWeeks } from '@/app/lib/firebase/firestore'
+import { IoMdAddCircle } from "react-icons/io";
 import './AddWeekForm.scss'
 
 export function AddWeekForm() {
@@ -106,17 +107,18 @@ export function AddWeekForm() {
 
           <button
             type="button"
+            className='btn-add'
             disabled={isSubtmitting}
             onClick={() => append({ entryDate: '', dispo: false, price: '' })}
           >
-            ++++
+            <IoMdAddCircle />
           </button>
           <button
             type="submit"
             disabled={isSubtmitting}
           >
             {/* revoir l'état du bouton */}
-            {isSubtmitting ? 'loader' : 'Ajouter'}
+            {isSubtmitting ? 'loader' : 'Envoyer'}
           </button>
           {}
         </form>

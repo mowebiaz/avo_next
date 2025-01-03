@@ -1,11 +1,12 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { collection, onSnapshot } from 'firebase/firestore'
+import { collection, onSnapshot, orderBy, query } from 'firebase/firestore'
 import { addDaysToDate } from '../../lib/utils/date'
 import { db } from '@/app/lib/firebase/config'
 import { deleteMutlipleWeeks, updateDispo } from '@/app/lib/firebase/firestore'
 import { ButtonSwitch } from '@/app/components/ButtonSwitch/ButtonSwitch'
+import { FaTrashAlt } from 'react-icons/fa'
 import './AdminPriceTable.scss'
 
 export function AdminPriceTable() {
@@ -15,8 +16,10 @@ export function AdminPriceTable() {
   useEffect(() => {
     const weeksCollection = collection(db, 'weeks')
 
+    const q = query(weeksCollection, orderBy('entryDate', 'asc'))
+
     // Real time listener
-    const unsubscribe = onSnapshot(weeksCollection, (snapshot) => {
+    const unsubscribe = onSnapshot(q, (snapshot) => {
       const data = snapshot.docs.map((doc) => ({
         ...doc.data(),
         id: doc.id,
@@ -56,13 +59,15 @@ export function AdminPriceTable() {
         <table className="admin-table">
           <thead>
             <tr>
-              {['Arrivée', 'Départ', 'Prix', 'Disponibilité'].map(
+              {['Arrivée', 'Départ', 'Prix (€)', 'Dispo'].map(
                 (header, index) => (
                   <th key={index}>{header}</th>
                 )
               )}
               <th key="btn-delete">
-                <button onClick={deleteWeeks}>trash</button>
+                <button onClick={deleteWeeks} disabled={weeksToDelete.length === 0}>
+                  <FaTrashAlt />
+                </button>
               </th>
             </tr>
           </thead>
@@ -71,7 +76,6 @@ export function AdminPriceTable() {
               <tr key={week.id}>
                 <td>
                   {week.entryDate.toDate().toLocaleDateString('fr-FR', {
-                    weekday: 'long',
                     day: 'numeric',
                     month: 'long',
                   })}

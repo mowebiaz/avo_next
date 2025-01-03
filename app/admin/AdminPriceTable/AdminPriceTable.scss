@@ -1,16 +1,24 @@
 @use '@/app/styles/variables' as *;
 
 .admin-table-container {
-  width: 100%;
+    width: 100%;
 }
 
 table.admin-table {
     width: 100%;
     border-collapse: collapse;
-    thead th {
-        background-color: $secondary-color;
-        border: 1px solid $footer-color;
-        padding: 0.2rem;
+    thead {
+        th {
+            background-color: $secondary-color;
+            border: 1px solid $footer-color;
+            padding: 0.2rem;
+        }
+        button {
+            &:disabled {
+                opacity: 0.4;
+                cursor: not-allowed;
+            }
+        }
     }
     tbody td {
         border: 1px solid $footer-color;

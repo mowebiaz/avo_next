@@ -1,18 +1,53 @@
 @use '@/app/styles/variables' as *;
 
+.legend {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    .legend-item{
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+        line-height: 1.5;
+        margin-bottom: 0.2rem;
+        .square {
+            width: 25px;
+            height: 25px;
+            border-radius: 5px;
+            border: 1px solid $footer-color;
+            &.booked {
+                background-color: hsl(0, 0%, 65%);
+
+            }
+        }
+    }
+}
+
 table.price-table {
     width: 100%;
     border-collapse: collapse;
-    thead th {
-        background-color: $secondary-color;
-        border: 1px solid $footer-color;
-        padding: 0.2rem;
+    caption {
+        text-align: left;
     }
-    tbody td {
-        border: 1px solid $footer-color;
-        text-align: center;
+    thead {
+        th {
+            background-color: $secondary-color;
+            border: 1px solid $footer-color;
+            padding: 0.2rem;
+        }
     }
-    tr.booked {
-        background-color: lightgrey;
+    tbody {
+        tr {
+            &.booked {
+                background-color: hsl(0, 0%, 65%);
+                font-style: italic;
+            }
+        }
+
+        td {
+            border: 1px solid $footer-color;
+            text-align: center;
+            padding: 0 0.2rem;
+        }
     }
 }
