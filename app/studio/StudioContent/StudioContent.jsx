@@ -50,9 +50,9 @@ export function StudioContent() {
           pour un accès à l&apos;ascenseur public et le centre station, ou au
           RdC pour un accès direct aux pistes.
         </p>
-        <ButtonLink href="/acces#studio">
+        <LinkAria href="/acces#studio" className="button-link">
           Comment accéder au studio ?
-        </ButtonLink>
+        </LinkAria>
       </section>
       <section className="equipments">
         <h2>Un studio tout équipé pour un séjour confortable</h2>

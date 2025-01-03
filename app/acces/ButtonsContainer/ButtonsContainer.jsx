@@ -1,11 +1,21 @@
-import { ButtonLink } from '../../components/ButtonLink/ButtonLink'
+import { LinkAria } from '@/app/components/LinkAria/LinkAria'
 import './ButtonsContainer.scss'
 
 export function ButtonsContainer() {
   return (
     <div className="buttons-container">
-      <ButtonLink href="#studio">Accès studio</ButtonLink>
-      <ButtonLink href="#station">Acces station</ButtonLink>
+      <LinkAria
+        href="#studio"
+        className="button-link"
+      >
+        Accès studio
+      </LinkAria>
+      <LinkAria
+        href="#station"
+        className="button-link"
+      >
+        Acces station
+      </LinkAria>
     </div>
   )
 }
