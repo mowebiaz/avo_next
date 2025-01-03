@@ -1,16 +1,30 @@
 @use '@/app/styles/variables' as *;
 
 footer {
-  margin-top: auto; /* for sticky footer */
-  width: 100vw;
-  display: flex;
-  background-color: $footer-color;
-  color: $background-color;
-  height: 2rem;
-  div {
-    height: 100%;
-    width: 100px;
-    background-color: $primary-color;
-  }
-
+    margin-top: auto; /* for sticky footer */
+    width: 100vw;
+    display: flex;
+    background-color: $footer-color;
+    color: $background-color;
+    /*height: 2rem;*/
+    padding: 0.5rem;
+    div {
+        height: 100%;
+        width: 100px;
+        background-color: $primary-color;
+    }
+    .link-admin {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        color: $primary-color;
+        border-radius: 5px;
+        border: 1px solid $primary-color;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            background-color: $primary-color;
+            color: $footer-color;
+        }
+    }
 }

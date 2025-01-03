@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { FaSnowflake } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
+import { PriceTable } from '../PriceTable/PriceTable';
 import './LocationContent.scss'
 
 export function LocationContent() {
@@ -9,6 +10,7 @@ export function LocationContent() {
       <h1>Studio à louer à Avoriaz - Disponibilités et Tarifs</h1>
       <section>
         <h2>Disponibilités et tarifs</h2>
+        <PriceTable />
         {/*         TODO
          */}{' '}
       </section>

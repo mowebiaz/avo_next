@@ -21,8 +21,6 @@ export function AccesContent() {
           de la station).
         </p>
         <MapGoogle/>
-        {/*         google map studio
-         */}
         <p>
           Avoriaz étant une station sans voiture, vous devrez vous garer et
           accéder au studio par d&apos;autres moyens de transport: à pied, en
@@ -240,7 +238,7 @@ export function AccesContent() {
         <p>En hiver:</p>
         <ul>
           <li>
-            Parking des Prodains: xx € la semaine.{' '}
+            Parking des Prodains: 208€ la semaine.{' '}
             <a
               className="link"
               href="https://www.parkingmorzine.com/reservation-parking-prodains.php"

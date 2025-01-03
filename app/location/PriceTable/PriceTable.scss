@@ -1,0 +1,18 @@
+@use '@/app/styles/variables' as *;
+
+table.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    thead th {
+        background-color: $secondary-color;
+        border: 1px solid $footer-color;
+        padding: 0.2rem;
+    }
+    tbody td {
+        border: 1px solid $footer-color;
+        text-align: center;
+    }
+    tr.booked {
+        background-color: lightgrey;
+    }
+}
