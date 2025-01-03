@@ -59,7 +59,7 @@ export function AdminPriceTable() {
         <table className="admin-table">
           <thead>
             <tr>
-              {['Arrivée', 'Départ', 'Prix', 'Dispo'].map(
+              {['Arrivée', 'Départ', 'Prix (€)', 'Dispo'].map(
                 (header, index) => (
                   <th key={index}>{header}</th>
                 )
@@ -76,7 +76,6 @@ export function AdminPriceTable() {
               <tr key={week.id}>
                 <td>
                   {week.entryDate.toDate().toLocaleDateString('fr-FR', {
-                    weekday: 'long',
                     day: 'numeric',
                     month: 'long',
                   })}

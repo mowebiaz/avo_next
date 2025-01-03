@@ -11,8 +11,6 @@ export function LocationContent() {
       <section>
         <h2>Disponibilités et tarifs</h2>
         <PriceTable />
-        {/*         TODO
-         */}{' '}
       </section>
       <section className="conditions">
         <h2>Réservation et conditions</h2>
