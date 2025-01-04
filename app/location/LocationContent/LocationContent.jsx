@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import { ButtonLink } from '../../components/ButtonLink/ButtonLink'
+import { LinkAria } from '../../components/LinkAria/LinkAria'
 import { FaSnowflake } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
 import { PriceTable } from '../PriceTable/PriceTable';
@@ -12,6 +14,7 @@ export function LocationContent() {
         <h2>Disponibilités et tarifs</h2>
         <PriceTable />
       </section>
+
       <section className="conditions">
         <h2>Réservation et conditions</h2>
         <ol>
@@ -19,9 +22,13 @@ export function LocationContent() {
           <div className='icon'>
             <FaUser />
             </div>
-            Premier <Link href="/contact" className='link'>contact</Link>: merci d&apos;indiquer
+            <p>
+            Premier <LinkAria href="/contact" className='link'>
+            contact
+            </LinkAria>: merci d&apos;indiquer
             la semaine souhaitée, votre e-mail, ainsi que le nombre
             d&apos;adulte(s) et d&apos;enfant(s)(moins de 18 ans).
+            </p>
           </li>
           <li>
           <div className='icon'>

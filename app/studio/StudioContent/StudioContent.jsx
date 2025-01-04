@@ -1,7 +1,6 @@
 'use client'
 
 import { LinkAria } from '@/app/components/LinkAria/LinkAria'
-import { ButtonLink } from '../../components/ButtonLink/ButtonLink'
 import { Carousel } from '../../components/Carousel/Carousel'
 import { slides } from '../../lib/slides'
 import './StudioContent.scss'
