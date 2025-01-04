@@ -1,8 +1,32 @@
 @use '@/app/styles/variables' as *;
 
+
+
 .mySwiper {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
+    width: 100%;
+    @media screen and (min-width: 425px) {
+        width: 90%;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 50%;
+    }
+    .swipper-wrapper {
+        overflow: hidden;
+    }
+
+    .btn-close {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        z-index: 100;
+        svg {
+            width: 2rem;
+            height: 2rem;
+            color: $primary-color;
+        }
+    }
 }
 
 .swiper-slide {
@@ -29,18 +53,20 @@
 .swiper-pagination {
     bottom: 0px !important;
     &-bullet {
-        border: 2px solid $primary-color !important;
-        /*       opacity: 1 !important;
-      background-color: $footer-color !important; */
+        border: 2px solid black !important;
+        background-color: $primary-color !important;
         &-active {
             background-color: $primary-color !important;
+            opacity: 1 !important;
+            border: 2px solid $primary-color !important;
         }
     }
 }
 
-.swiper-button-prev, .swiper-button-next {
-    width: clamp(30px, 2vw, 100px)  !important;
-    height: clamp(30px, 2vw, 100px)  !important;
+.swiper-button-prev,
+.swiper-button-next {
+    width: clamp(30px, 2vw, 100px) !important;
+    height: clamp(30px, 2vw, 100px) !important;
     color: $primary-color !important;
     background-color: $footer-color !important;
     border-radius: 50% !important;
@@ -53,10 +79,10 @@
 clamp(30px, 2vw, 100px) 
 */
 
-.mySwiper {
+/*.mySwiper {
     width: 100%; // Valeur par défaut
 
-    @media screen and (min-width: 425px) {
+/*     @media screen and (min-width: 425px) {
         width: 80%;
     }
 
@@ -66,5 +92,5 @@ clamp(30px, 2vw, 100px)
 
     @media screen and (min-width: 1024px) {
         width: 50%;
-    }
-}
+    } 
+}*/

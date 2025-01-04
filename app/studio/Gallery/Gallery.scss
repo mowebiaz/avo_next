@@ -1,0 +1,41 @@
+@use '@/app/styles/variables' as *;
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.2rem;
+    .gallery-item {
+        position: relative;
+        svg {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            stroke: white;
+        }
+    }
+
+    .gallery-image {
+        justify-self: center;
+        /*         display: block;
+        height: 150px;
+        width: fit-content;
+        object-fit: cover;*/
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border: 1px solid transparent;
+        &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+            border: 1px solid $footer-color;
+        }
+    }
+}
+
+.gallery-dialog {
+    position: absolute;
+    margin: auto;
+    &::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}

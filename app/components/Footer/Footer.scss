@@ -8,11 +8,7 @@ footer {
     color: $background-color;
     /*height: 2rem;*/
     padding: 0.5rem;
-    div {
-        height: 100%;
-        width: 100px;
-        background-color: $primary-color;
-    }
+
     .link-admin {
         display: inline-flex;
         justify-content: center;
@@ -26,5 +22,13 @@ footer {
             background-color: $primary-color;
             color: $footer-color;
         }
+    }
+
+    .button-login {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        padding-right: 0.5rem;
     }
 }

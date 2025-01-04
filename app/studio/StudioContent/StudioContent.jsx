@@ -1,8 +1,6 @@
-'use client'
-
 import { LinkAria } from '@/app/components/LinkAria/LinkAria'
-import { Carousel } from '../../components/Carousel/Carousel'
-import { slides } from '../../lib/slides'
+import { Gallery } from '../Gallery/Gallery'
+import { slides2 } from '../../lib/slides2'
 import './StudioContent.scss'
 
 const equipmentsList = [
@@ -74,7 +72,7 @@ export function StudioContent() {
             <li key={equipment}>{equipment}</li>
           ))}
         </ul>
-        <Carousel slides={slides} />
+        <Gallery slides={slides2} />
       </section>
       <section className="pricing">
         <h2>Disponibilités et tarifs</h2>
