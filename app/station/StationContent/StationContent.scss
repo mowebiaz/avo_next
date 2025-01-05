@@ -3,6 +3,11 @@
 .station-content {
     display: flex;
     flex-direction: column;
+    .line-title {
+        .icon-container {
+            margin-top: 1rem;
+        }
+    }
     .images {
         width: 100%;
         min-height: 40vh;

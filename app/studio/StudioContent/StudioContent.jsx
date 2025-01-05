@@ -1,6 +1,8 @@
 import { LinkAria } from '@/app/components/LinkAria/LinkAria'
 import { Gallery } from '../Gallery/Gallery'
-import { slides2 } from '../../lib/slides2'
+import { slides } from '../../lib/slides'
+import { TitleWithIcon } from '@/app/components/TitleWithIcon/TitleWithIcon'
+import { FaHandPointRight } from 'react-icons/fa'
 import './StudioContent.scss'
 
 const equipmentsList = [
@@ -37,9 +39,9 @@ export function StudioContent() {
           Hauts-Forts), à 450m du centre et du{' '}
           <LinkAria
             className="link"
-            href={"https://www.village-des-enfants.com/fr/"}
+            href={'https://www.village-des-enfants.com/fr/'}
             target="_blank"
-            referrerPolicy='no-opener no-referrer'
+            referrerPolicy="no-opener no-referrer"
           >
             village des enfants
           </LinkAria>
@@ -47,9 +49,18 @@ export function StudioContent() {
           pour un accès à l&apos;ascenseur public et le centre station, ou au
           RdC pour un accès direct aux pistes.
         </p>
-        <LinkAria href="/acces#studio" className="button-link">
-          Comment accéder au studio ?
-        </LinkAria>
+
+        <TitleWithIcon
+          title={
+            <LinkAria
+              href="/acces#studio"
+              className="link"
+            >
+              comment accéder au studio ?
+            </LinkAria>
+          }
+          icon={<FaHandPointRight />}
+        />
       </section>
       <section className="equipments">
         <h2>Un studio tout équipé pour un séjour confortable</h2>
@@ -72,16 +83,20 @@ export function StudioContent() {
             <li key={equipment}>{equipment}</li>
           ))}
         </ul>
-        <Gallery slides={slides2} />
+        <Gallery slides={slides} />
       </section>
       <section className="pricing">
-        <h2>Disponibilités et tarifs</h2>
-        <p>
-          <a href="/disponibilites-tarifs.html">
-            Consultez les disponibilités et tarifs du studio
-          </a>
-          .
-        </p>
+        <TitleWithIcon
+          title={
+            <LinkAria
+              href="/location"
+              className="link"
+            >
+              Consulter les disponibilités et tarifs du studio
+            </LinkAria>
+          }
+          icon={<FaHandPointRight />}
+        />
       </section>
     </div>
   )

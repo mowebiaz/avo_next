@@ -1,15 +1,16 @@
-import Baignoire from '@/public/images/baignoire.webp'
-import Balcon from '@/public/images/balcon.webp'
-import Cuisine from '@/public/images/cuisine.webp'
-import PdlOne from '@/public/images/pas-du-lac.webp'
-import PdlTwo from '@/public/images/pas-du-lac_2.webp'
-import SdB from '@/public/images/salle-de-bains.webp'
-import SejourOne from '@/public/images/sejour-1.webp'
-import SejourTwo from '@/public/images/sejour-2.webp'
-import SejourThree from '@/public/images/sejour-3.webp'
-import VueBalcon from '@/public/images/vue-du-balcon.webp'
-import VueEnsemble from '@/public/images/vue-ensemble.webp'
-import Wc from '@/public/images/wc.webp'
+import SejourOne from '@/public/images/studio/SejourOne.webp'
+import VueEnsemble from '@/public/images/studio/VueEnsemble.webp'
+import SejourTwo from '@/public/images/studio/SejourTwo.webp'
+import SejourThree from '@/public/images/studio/SejourThree.webp'
+import Cuisine from '@/public/images/studio/Cuisine.webp'
+import SdB from '@/public/images/studio/SdB.webp'
+import Wc from '@/public/images/studio/Wc.webp'
+import Baignoire from '@/public/images/studio/Baignoire.webp'
+import Balcon from '@/public/images/studio/Balcon.webp'
+import VueBalcon from '@/public/images/studio/VueBalcon.webp'
+import PasdulacOne from '@/public/images/studio/PasdulacOne.webp'
+import PasdulacTwo from '@/public/images/studio/PasdulacTwo.webp'
+
 
 export const slides = [
   {
@@ -18,10 +19,14 @@ export const slides = [
   },
   {
     src: VueEnsemble,
-    alt: "vue d'ensemble",
+    alt: 'vue d\'ensemble',
   },
   {
     src: SejourTwo,
+    alt: 'séjour',
+  },
+  {
+    src: SejourThree,
     alt: 'séjour',
   },
   {
@@ -29,11 +34,7 @@ export const slides = [
     alt: 'cuisine',
   },
   {
-    src: SejourThree,
-    alt: 'séjour',
-  },
-  {
-    src: SdB,
+src: SdB,
     alt: 'salle de bains',
   },
   {
@@ -44,7 +45,6 @@ export const slides = [
     src: Baignoire,
     alt: 'salle de bains',
   },
-
   {
     src: Balcon,
     alt: 'balcon',
@@ -53,13 +53,12 @@ export const slides = [
     src: VueBalcon,
     alt: 'vue du balcon',
   },
-
   {
-    src: PdlOne,
+    src: PasdulacOne,
     alt: 'Pas du Lac',
   },
   {
-    src: PdlTwo,
+    src: PasdulacTwo,
     alt: 'Pas du Lac',
   },
 ]

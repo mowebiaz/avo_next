@@ -109,36 +109,28 @@ export function AccesContent() {
               </tr>
               <tr>
                 <td>
-                  Adulte
-                  <br />
-                  <span className="definition">de 26 à 64 ans</span>
+                  Adulte<sup>(1)</sup>
                 </td>
                 <td>8,60</td>
                 <td>13,80</td>
               </tr>
               <tr>
                 <td>
-                  Enfant
-                  <br />
-                  <span className="definition">de 5 à 15 ans</span>
+                  Enfant<sup>(2)</sup>
                 </td>
                 <td>6,20</td>
                 <td>10,00</td>
               </tr>
               <tr>
                 <td>
-                  Jeunes
-                  <br />
-                  <span className="definition">de 16 à 25 ans</span>
+                  Jeunes<sup>(3)</sup>
                 </td>
                 <td>7,70</td>
                 <td>12.40</td>
               </tr>
               <tr>
                 <td>
-                  Sénior
-                  <br />
-                  <span className="definition">65 ans et plus</span>
+                  Sénior<sup>(4)</sup>
                 </td>
                 <td>7,70</td>
                 <td>12.40</td>
@@ -188,37 +180,21 @@ export function AccesContent() {
               </tr>
               <tr>
                 <td>
-                  Adulte
-                  <br />
-                  <span className="definition">de 26 à 64 ans</span>
+                  Pour tous<sup>(1),(2),(3),(4)</sup>
                 </td>
-                <td rowSpan={4}>6,70</td>
-                <td rowSpan={4}>7,80</td>
+                <td>6,70</td>
+                <td>7,80</td>
               </tr>
-              <tr>
-                <td>
-                  Enfant
-                  <br />
-                  <span className="definition">de 5 à 15 ans</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Jeunes
-                  <br />
-                  <span className="definition">de 16 à 25 ans</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Sénior
-                  <br />
-                  <span className="definition">65 ans et plus</span>
-                </td>
-              </tr>
+
             </tbody>
           </table>
         </div>
+          <div className='table-definition'>
+            <p>(1) Adulte: de 26 à 64 ans -  
+            (2) Enfant: de 5 à 15 ans - 
+            (3) Jeune: de 16 à 25 ans - 
+            (4) Sénior: 65 ans et plus</p>
+          </div>
 
         <TitleWithIcon
           title={<h3>Arrivée par l&apos;accueil station</h3>}

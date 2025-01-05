@@ -33,14 +33,17 @@ export function Gallery({ slides }) {
     <div className="gallery">
       <div className="gallery-grid">
         {slides.map((slide, index) => (
-          <div key={index} className='gallery-item'>
+          <div
+            key={index}
+            className="gallery-item"
+            onClick={() => openModal(index)}
+          >
             <Image
               src={slide.src}
               alt={slide.alt}
               /*width={200}*/
               height={150}
               className="gallery-image"
-              onClick={() => openModal(index)}
             />
             <TbZoom />
           </div>

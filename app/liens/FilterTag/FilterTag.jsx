@@ -1,5 +1,5 @@
-import { FaRegWindowClose } from "react-icons/fa";
-import { IoIosCloseCircleOutline } from "react-icons/io";
+import { FaRegWindowClose } from 'react-icons/fa'
+import { IoIosCloseCircleOutline } from 'react-icons/io'
 import './FilterTag.scss'
 
 export function FilterTag({
@@ -7,8 +7,6 @@ export function FilterTag({
   selectedCategories,
   onChangeCategories,
 }) {
-
-
   function handleClick(e) {
     //e.prevent.default()
     const category = e.currentTarget.dataset.category
@@ -17,19 +15,25 @@ export function FilterTag({
 
   return (
     <div className="filters">
-      <p>Filtrer:</p>
-      {categoriesList.map((category) => (
-        <button
-          type="button"
-          key={category}
-          data-category={category}
-          onClick={handleClick}
-          className={selectedCategories.includes(category) ? 'selected' : ''}
-        >
-          {category}
-          {selectedCategories.includes(category) ? <IoIosCloseCircleOutline /> : null}
-        </button>
-      ))}
+      <div>
+        <p>Filtrer:</p>
+      </div>
+      <div>
+        {categoriesList.map((category) => (
+          <button
+            type="button"
+            key={category}
+            data-category={category}
+            onClick={handleClick}
+            className={selectedCategories.includes(category) ? 'selected' : ''}
+          >
+            {category}
+            {selectedCategories.includes(category) ? (
+              <IoIosCloseCircleOutline />
+            ) : null}
+          </button>
+        ))}
+      </div>
     </div>
   )
 }

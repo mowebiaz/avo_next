@@ -65,7 +65,7 @@ export function LocationContent() {
             la fin de la location.
           </li>
         </ol>
-        <h3>Informations</h3>
+        <h2>Informations</h2>
         <p>
           Les arrivées se font à partir de 17h et les départs avant 10h.
           <br></br>

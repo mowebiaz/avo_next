@@ -1,7 +1,13 @@
 @use '@/app/styles/variables' as *;
 
 .acces {
-    gap: 2rem;
+    h1 {
+        padding: 1rem 1rem 0.5rem 1rem;
+    }
+    li {
+        line-height: 1.2;
+        padding-bottom: 0.4rem;
+    }
 }
 
 .acces section {
@@ -16,8 +22,23 @@
         scroll-margin-top: 4rem; /* height of sticky header */
     }
 
+    h4 {
+        margin-top: 0.5rem;
+    }
+    .line-title {
+        .icon-container {
+            margin-top: 0.5rem;
+        }
+    }
+
+    .table-definition {
+        text-align: center;
+        font-style: italic;
+        font-size: 1rem;
+    }
+
     .tables {
-        margin: 1rem 0;
+        margin: 0.5rem 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -25,6 +46,9 @@
         align-items: flex-start;
 
         table {
+            span {
+                font-size: 1rem;
+            }
             &.timetable {
                 max-width: 400px;
             }
@@ -33,7 +57,7 @@
                 th {
                     background-color: $secondary-color;
                     border: 1px solid $footer-color;
-                    padding: 0.4rem;
+                    padding: 0.2rem;
                 }
             }
 
@@ -41,18 +65,7 @@
                 border: 1px solid $footer-color;
                 text-align: center;
                 line-height: 1.2;
-                padding: 0.5rem;
-                span {
-                    font-style: italic;
-                    font-size: 1rem;
-
-                    .definition {
-                        display: block;
-                        padding-top: 0.5rem;
-                        width: max-content;
-                        text-align: center;
-                    }
-                }
+                padding: 0.3rem;
             }
         }
     }

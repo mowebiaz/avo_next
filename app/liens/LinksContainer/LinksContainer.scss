@@ -3,8 +3,13 @@
 .cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    padding: 2rem;
+    gap: 0.5rem;
+    padding: 2rem 0;
+
+    @media screen and (min-width: $medium) {
+        padding: 2rem;
+        gap: 1rem;
+    }
 
     .card {
         border-width: 1px;

@@ -66,6 +66,7 @@ main {
     align-items: center;
     flex: 1 0 auto;
     margin-top: clamp(0.5rem, 3vh, 5rem); /* à revoir*/
+    margin-bottom: 1rem;
     width: 85vw;
     max-width: $max-width;
 }
@@ -81,10 +82,14 @@ h1 {
 h2 {
     font-size: clamp(1.3rem, 1.127rem + 0.739vw, 1.6rem);
     color: hsla(0, 0%, 20%, 1);
+    margin-top: 1rem;
 }
 
 h3 {
     font-size: clamp(1.25rem, 1.106rem + 0.616vw, 1.5rem);
+    color: hsla(0, 0%, 20%, 1);
+    margin-top: 0.5rem;
+
 }
 
 a {

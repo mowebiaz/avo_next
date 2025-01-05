@@ -20,13 +20,17 @@ export const links = [
     category: 'ski',
   },
   {
+    name: 'Golf',
+    link: 'https://www.avoriaz.com/activites-ete/golf-d-avoriaz/golf/',
+    category: 'sur place',
+  },
+  {
     name: 'les Snowparks',
     link: 'https://www.avoriaz.com/decouvrir/les-incontournables/snowparks/',
     category: 'ski',
   },
-  {
-    name: 'Golf',
-    link: 'https://www.avoriaz.com/activites-ete/golf-d-avoriaz/golf/',
+  {name: 'Avoriaz Pratique',
+    link: 'https://www.facebook.com/groups/937814687028762',
     category: 'sur place',
   },
   {
@@ -55,29 +59,14 @@ export const links = [
     category: 'sur place',
   },
   {
-    name: 'Ferme de Seraussaix',
-    link: 'https://www.lafermedeseraussaix.com/',
-    category: 'sur place',
-  },
-  {
-    name: 'Balade en traineaux',
-    link: 'https://www.avoriaz.com/decouvrir/micro-aventure/huuue-cocher--/',
-    category: 'sur place',
-  },
-  {
-    name: 'Chiens de traîneaux',
-    link: 'https://www.lapattenordic.fr/',
-    category: 'sur place',
-  },
-  {
     name: 'Antoine Ski',
     link: 'https://www.antoine-ski.fr/',
     category: 'ski',
   },
   {
-    name: 'Ski Land',
-    link: 'https://www.skiset.com/station-ski/avoriaz/magasins/ski-land',
-    category: 'ski',
+    name: 'Ferme de Seraussaix',
+    link: 'https://www.lafermedeseraussaix.com/',
+    category: 'sur place',
   },
   {
     name: 'Ski Pass',
@@ -85,15 +74,33 @@ export const links = [
     category: 'ski',
   },
   {
-    name: 'Autocars Jacquet',
-    link: 'https://jacquet-autocars.com/lignes-regulieres/',
-    category: 'trajets',
+    name: 'Balade en traineaux',
+    link: 'https://www.avoriaz.com/decouvrir/micro-aventure/huuue-cocher--/',
+    category: 'sur place',
+  },
+  {
+    name: 'Ski Land',
+    link: 'https://www.skiset.com/station-ski/avoriaz/magasins/ski-land',
+    category: 'ski',
+  },
+  {
+    name: 'Chiens de traîneaux',
+    link: 'https://www.lapattenordic.fr/',
+    category: 'sur place',
   },
   {
     name: 'Swiss Tours',
     link: 'https://www.cham-transfers.com/EN/REGULAR-LINE/Geneva-Les-Prodains-(Regular-line)/Regular-Line/CT0140BT/easy-bus-transfers-regular-line-from-geneva-to-les-prodains-cheap-827.html',
     category: 'trajets',
   },
+
+
+  {
+    name: 'Autocars Jacquet',
+    link: 'https://jacquet-autocars.com/lignes-regulieres/',
+    category: 'trajets',
+  },
+
   {
     name: 'Parkings - haut',
     link: 'https://www.avoriazparkings.com/',
