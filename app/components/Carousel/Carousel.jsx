@@ -46,8 +46,8 @@ export function Carousel({ slides, initialSlide, onClose }) {
                 src={slide.src}
                 alt={slide.alt}
                 /*width={750}*/
-                layout="intrinsic"
-                height={500}
+                /*layout="intrinsic"*/
+                /*height={500}*/
                 className="carousel-image"
               />
             </div>

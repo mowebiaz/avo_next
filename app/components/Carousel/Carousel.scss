@@ -5,10 +5,10 @@
     border-radius: 10px;
     width: auto;
     max-width: 750px;
-     /*@media screen and (min-width: 425px) {
+    /*@media screen and (min-width: 425px) {
         width: 90%;
-    }
-    @media screen and (min-width: 1024px) {
+    }*/
+    /*@media screen and (min-width: 1024px) {
         width: 50%;
     } */
     .swipper-wrapper {
@@ -20,6 +20,10 @@
         top: 4px;
         right: 4px;
         z-index: 100;
+        outline: none;
+        width: 2rem;
+        height: 2rem;
+        color: $primary-color;
         svg {
             width: 2rem;
             height: 2rem;
@@ -29,7 +33,7 @@
 }
 
 .swiper-slide {
-    background: $background-color;
+    background: $footer-color;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,23 +41,27 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        /*height: 500px;
-        width: 100%;*/
-
+        height: 200px; /*conserver*/
+        width: auto;
+        /*width: 100%; /*pour avoir la pagination */
+        object-fit: cover;
+        @media screen and (min-width: 1024px) {
+            height: 500px;
+        } 
+        /*width: 100%;*/
     }
 }
 
 .carousel-image {
     display: block;
-/*     width: 100%;
-    height: 100%;*/
-    /*object-fit: cover; */
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .swiper-pagination {
     bottom: 0px !important;
+
     &-bullet {
         border: 2px solid black !important;
         background-color: $primary-color !important;
@@ -76,4 +84,3 @@
         font-size: 1rem !important;
     }
 }
-
