@@ -83,7 +83,7 @@ export function StudioContent() {
             <li key={equipment}>{equipment}</li>
           ))}
         </ul>
-        <Gallery slides={slides} />
+        <Gallery images={slides} />
       </section>
       <section className="pricing">
         <TitleWithIcon

@@ -16,49 +16,73 @@ export const slides = [
   {
     src: SejourOne,
     alt: 'séjour',
+    width: 667,
+    height: 500
   },
   {
     src: VueEnsemble,
     alt: 'vue d\'ensemble',
+    width: 667,
+    height: 500
   },
   {
     src: SejourTwo,
     alt: 'séjour',
+    width: 667,
+    height: 500
   },
   {
     src: SejourThree,
     alt: 'séjour',
+    width: 625,
+    height: 500
   },
   {
     src: Cuisine,
     alt: 'cuisine',
+    width:452,
+    height:500
   },
   {
 src: SdB,
     alt: 'salle de bains',
+    width:375,
+    height:500
   },
   {
     src: Wc,
     alt: 'salle de bains',
+    width:375,
+    height:500
   },
   {
     src: Baignoire,
     alt: 'salle de bains',
+    width:375,
+    height:500
   },
   {
     src: Balcon,
     alt: 'balcon',
+    width: 667,
+    height: 500
   },
   {
     src: VueBalcon,
     alt: 'vue du balcon',
+    width: 750,
+    height: 500
   },
   {
     src: PasdulacOne,
     alt: 'Pas du Lac',
+    width: 750,
+    height: 500
   },
   {
     src: PasdulacTwo,
     alt: 'Pas du Lac',
+    width: 750,
+    height: 500
   },
 ]

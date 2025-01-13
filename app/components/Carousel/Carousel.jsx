@@ -1,59 +1,49 @@
 'use client'
 
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination, EffectFade } from 'swiper/modules'
-import 'swiper/scss'
-import 'swiper/scss/navigation'
-import 'swiper/scss/pagination'
-import 'swiper/scss/effect-fade'
-import { IoMdCloseCircle } from 'react-icons/io'
+import { MdNavigateNext, MdNavigateBefore } from 'react-icons/md'
 import './Carousel.scss'
 
-export function Carousel({ slides, initialSlide, onClose }) {
-  const [swiper, setSwiper] = useState(null)
+export function Carousel({ images, index, setIndex }) {
+  const next = () => {
+    setIndex((prevIndex) => (prevIndex + 1) % images.length)
+  }
 
-  useEffect(() => {
-    if (swiper) {
-      swiper.slideTo(initialSlide, 0)
-    }
-  }, [swiper, initialSlide])
+  const prev = () => {
+    setIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length)
+  }
 
   return (
     <div className="carousel">
-      <Swiper
-        className="mySwiper"
-        spaceBetween={30}
-        effect={'fade'}
-        navigation={true}
-        pagination={{ clickable: true }}
-        modules={[EffectFade, Navigation, Pagination]}
-        slidesPerView={1}
-        onSwiper={setSwiper}
-      >
+      <Image
+        src={images[index].src}
+        alt={images[index].alt}
+        width={images[index].width}
+        height={images[index].height}
+      />
+      <div className="buttons">
         <button
-          type="button"
-          className="btn-close"
-          onClick={onClose}
+          className="prev"
+          onClick={prev}
         >
-          <IoMdCloseCircle />
+          <MdNavigateBefore />
         </button>
-        {slides.map((slide, index) => (
-          <SwiperSlide key={index}>
-            <div className="carousel-image-container">
-              <Image
-                src={slide.src}
-                alt={slide.alt}
-                /*width={750}*/
-                /*layout="intrinsic"*/
-                /*height={500}*/
-                className="carousel-image"
-              />
-            </div>
-          </SwiperSlide>
+        <button
+          className="next"
+          onClick={next}
+        >
+          <MdNavigateNext />
+        </button>
+      </div>
+      <div className="dots">
+        {images.map((_, i) => (
+          <span
+            key={i}
+            className={index === i ? 'active' : ''}
+            onClick={() => setIndex(i)}
+          />
         ))}
-      </Swiper>
+      </div>
     </div>
   )
 }
