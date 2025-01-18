@@ -22,9 +22,9 @@ export function ButtonSwitch({ id, isChecked, onToggle }) {
         onChange={handleCheck}
       />
       {isChecked ? (
-        <span className="on">disponible</span>
+        <span className="on">oui</span>
       ) : (
-        <span className="off">réservé</span>
+        <span className="off">non</span>
       )}
     </label>
   )

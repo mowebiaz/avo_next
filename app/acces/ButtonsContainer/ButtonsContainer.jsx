@@ -6,13 +6,13 @@ export function ButtonsContainer() {
     <div className="buttons-container">
       <LinkAria
         href="#studio"
-        className="button-link"
+        className="button-link-aria"
       >
         Accès studio
       </LinkAria>
       <LinkAria
         href="#station"
-        className="button-link"
+        className="button-link-aria"
       >
         Acces station
       </LinkAria>

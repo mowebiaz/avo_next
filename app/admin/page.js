@@ -3,9 +3,9 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '../context/AuthContext'
-import { logout } from '../lib/firebase/auth/logout'
 import { AdminPriceTable } from './AdminPriceTable/AdminPriceTable'
 import { AddWeekForm } from './AddWeekForm/AddWeekForm'
+import { ButtonLogout } from './ButtonLogout/ButtonLogout'
 
 export default function Admin() {
   const { user, loading } = useAuth()
@@ -24,12 +24,10 @@ export default function Admin() {
   if (user) {
     return (
       <main className="admin">
+        <ButtonLogout />
         <h1>Admin</h1>
-        <>
-          <button onClick={logout}>Logout</button>
-          <AdminPriceTable />
-          <AddWeekForm/>
-        </>
+        <AdminPriceTable />
+        <AddWeekForm />
       </main>
     )
   }

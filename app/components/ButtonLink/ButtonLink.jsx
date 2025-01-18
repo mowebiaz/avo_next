@@ -3,7 +3,7 @@ import './ButtonLink.scss'
 
 export function ButtonLink({
   href,
-  className = 'button-link',
+  className,
   children,
   ...props
 }) {

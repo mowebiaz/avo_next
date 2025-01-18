@@ -1,9 +1,7 @@
 import Link from 'next/link'
-import { ButtonLink } from '../../components/ButtonLink/ButtonLink'
-import { LinkAria } from '../../components/LinkAria/LinkAria'
-import { FaSnowflake } from "react-icons/fa6";
-import { FaUser } from "react-icons/fa";
-import { PriceTable } from '../PriceTable/PriceTable';
+import { FaSnowflake } from 'react-icons/fa6'
+import { FaUser } from 'react-icons/fa'
+import { PriceTable } from '../PriceTable/PriceTable'
 import './LocationContent.scss'
 
 export function LocationContent() {
@@ -19,50 +17,55 @@ export function LocationContent() {
         <h2>Réservation et conditions</h2>
         <ol>
           <li>
-          <div className='icon'>
-            <FaUser />
+            <div className="icon">
+              <FaUser />
             </div>
             <p>
-            Premier <LinkAria href="/contact" className='link'>
-            contact
-            </LinkAria>: merci d&apos;indiquer
-            la semaine souhaitée, votre e-mail, ainsi que le nombre
-            d&apos;adulte(s) et d&apos;enfant(s)(moins de 18 ans).
+              Premier{' '}
+              <Link
+                href="/contact"
+                className="link"
+              >
+                contact
+              </Link>
+              : merci d&apos;indiquer la semaine souhaitée, votre e-mail, ainsi
+              que le nombre d&apos;adulte(s) et d&apos;enfant(s)(moins de 18
+              ans).
             </p>
           </li>
           <li>
-          <div className='icon'>
-            <FaSnowflake />
+            <div className="icon">
+              <FaSnowflake />
             </div>
-            Envoi du contrat de location par mail.</li>
+            Envoi du contrat de location par mail.
+          </li>
           <li>
-          <div className='icon'>
-            <FaUser />
+            <div className="icon">
+              <FaUser />
             </div>
-
             Le contrat de location est à retourner signé, accompagné des arrhes
             (50% du montant de la location) et du chèque de caution.
           </li>
           <li>
-          <div className='icon'>
-            <FaSnowflake />
+            <div className="icon">
+              <FaSnowflake />
             </div>
             La semaine est réservée à réception du courrier. Les arrhes sont
             encaissées dans les jours qui suivent.
           </li>
           <li>
-          <div className='icon'>
-            <FaUser />
+            <div className="icon">
+              <FaUser />
             </div>
             Le solde de la location est à payer 15 jours avant le début de la
             location.
           </li>
           <li>
-          <div className='icon'>
-            <FaSnowflake />
+            <div className="icon">
+              <FaSnowflake />
             </div>
-            Le chèque de caution est renvoyé dans un délai d&apos;une semaine après
-            la fin de la location.
+            Le chèque de caution est renvoyé dans un délai d&apos;une semaine
+            après la fin de la location.
           </li>
         </ol>
         <h2>Informations</h2>

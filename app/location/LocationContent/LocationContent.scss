@@ -1,9 +1,19 @@
 @use '@/app/styles/variables' as *;
 
 .conditions {
-/*     a {
+    /*     a {
         display: contents;
     } */
+    a.link {
+        &:hover {
+            background-color: $secondary-color;
+            color: $footer-color;
+            color: black;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    }
+    
     ol {
         list-style-type: none;
         list-style-position: inside;

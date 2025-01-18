@@ -7,11 +7,15 @@
 table.admin-table {
     width: 100%;
     border-collapse: collapse;
+    @media screen and (max-width: 425px) {
+        font-size: 1rem;
+    }
     thead {
         th {
             background-color: $secondary-color;
             border: 1px solid $footer-color;
             padding: 0.2rem;
+
         }
         button {
             &:disabled {
@@ -23,5 +27,10 @@ table.admin-table {
     tbody td {
         border: 1px solid $footer-color;
         text-align: center;
+        padding: 5px;
+        label {
+            width: fit-content;
+            justify-self: center;
+        }
     }
 }

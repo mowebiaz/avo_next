@@ -1,0 +1,18 @@
+@use '../../styles/variables' as *;
+@use 'sass:color';
+
+.button-logout {
+  display: flex;
+  align-items: center;
+  align-self: end;
+  gap: 0.5rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 8px;
+  border: 1px solid crimson;
+  background-color: color.scale($footer-color, $lightness: 60%);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: crimson;
+  }
+}

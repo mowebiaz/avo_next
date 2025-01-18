@@ -1,8 +1,9 @@
 import { useRef } from 'react'
 import { useFieldArray, useForm } from 'react-hook-form'
-import { Timestamp } from 'firebase/firestore'
+import { doc, Timestamp } from 'firebase/firestore'
 import { addMultipleWeeks } from '@/app/lib/firebase/firestore'
-import { IoMdAddCircle } from "react-icons/io";
+import { UserMessage } from '@/app/components/UserMessage/UserMessage'
+import { IoMdAddCircle } from 'react-icons/io'
 import './AddWeekForm.scss'
 
 export function AddWeekForm() {
@@ -19,6 +20,7 @@ export function AddWeekForm() {
     handleSubmit,
     register,
     setError,
+    reset,
     formState: { errors, isSubtmitting, isSubmitSuccessful },
   } = useForm({
     defaultValues: {
@@ -42,20 +44,21 @@ export function AddWeekForm() {
     }))
     try {
       await addMultipleWeeks(formatedWeeksList)
+      reset()
       formRef.current.style.display = 'none'
       btnFormRef.current.style.display = 'flex'
-            /*      si succès (isSubmitSuccessful)
+      /*      si succès (isSubmitSuccessful)
       afficher un message de confirmation*/
     } catch (error) {
       console.log(error)
-            /*si echec, afficher un message d'erreur */
+      /*si echec, afficher un message d'erreur */
     }
   }
 
   return (
     <>
       <div ref={btnFormRef}>
-        <button onClick={handleClick}>Ajouter une semaine</button>
+        <button className="btn-addweek" ref={btnFormRef} onClick={handleClick}>Ajouter une semaine</button>
       </div>
       <div
         ref={formRef}
@@ -77,13 +80,15 @@ export function AddWeekForm() {
                     required: 'Veuillez renseigner la date',
                   })}
                 />
-                {errors?.newWeek?.[index]?.newEntryDay && (
-                  <p>{errors.newWeek[index].newEntryDay.message}</p>
+                {errors?.newWeek?.[index]?.entryDate && (
+                  <p className="message-error">
+                    {errors.newWeek[index].entryDate.message}
+                  </p>
                 )}
               </div>
 
               <div>
-                <label>Disponible ?:</label>
+                <label>Disponible ?</label>
                 <input
                   type="checkbox"
                   {...register(`newWeek.${index}.dispo`)}
@@ -98,8 +103,10 @@ export function AddWeekForm() {
                     required: 'Veuillez renseigner le prix',
                   })}
                 />
-                {errors?.newWeek?.[index]?.newPrice && (
-                  <p>{errors.newWeek[index].newPrice.message}</p>
+                {errors?.newWeek?.[index]?.price && (
+                  <p className="message-error">
+                    {errors.newWeek[index].price.message}
+                  </p>
                 )}
               </div>
             </div>
@@ -107,7 +114,7 @@ export function AddWeekForm() {
 
           <button
             type="button"
-            className='btn-add'
+            className="btn-add"
             disabled={isSubtmitting}
             onClick={() => append({ entryDate: '', dispo: false, price: '' })}
           >
@@ -120,7 +127,6 @@ export function AddWeekForm() {
             {/* revoir l'état du bouton */}
             {isSubtmitting ? 'loader' : 'Envoyer'}
           </button>
-          {}
         </form>
       </div>
     </>

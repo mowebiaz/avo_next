@@ -1,27 +1,20 @@
 @use '@/app/styles/variables' as *;
+@use '@/app/styles/mixins' as *;
 
-.button-link {
-    font-weight: 600;
-    font-size: 1.25rem;
+.button-link-router, .button-link-aria {
+@include buttonLink
+}
 
-    display: inline-block;
-    background-color: $footer-color;
-    color: $primary-color;
-    text-decoration: none;
-    font-family: var(--font-raleway);
-    padding: 0.5rem 1rem;
-    margin: 0.5rem;
-    border-radius: 8px;
-    box-shadow: 1.4px 1.4px 1.4px rgba(0, 0, 0, 0.02),
-        3.3px 3.3px 3.3px rgba(0, 0, 0, 0.028),
-        6.1px 6.1px 6.1px rgba(0, 0, 0, 0.035),
-        10.9px 10.9px 10.9px rgba(0, 0, 0, 0.042),
-        20.5px 20.5px 20.5px rgba(0, 0, 0, 0.05),
-        49px 49px 49px rgba(0, 0, 0, 0.07);
-    transition: all 0.2s ease-in-out;
+.button-link-aria {
     &[data-hovered],
     &[data-pressed] {
         background-color: $primary-color;
         color: $footer-color;
     }
 }
+
+.button-link-router:hover {
+    background-color: $primary-color;
+    color: $footer-color;
+}
+

@@ -4,15 +4,25 @@ footer {
     margin-top: auto; /* for sticky footer */
     width: 100vw;
     display: flex;
+    align-items: center;
     background-color: $footer-color;
     color: $background-color;
     /*height: 2rem;*/
     padding: 0.5rem;
+    p {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    .link {
+        text-decoration: underline dotted $background-color 2px;
+        }
 
     .link-admin {
         display: inline-flex;
         justify-content: center;
         align-items: center;
+        margin-left: auto;
+        padding-right: 0.5rem;
         padding: 0.5rem;
         color: $primary-color;
         border-radius: 5px;

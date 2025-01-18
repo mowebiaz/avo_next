@@ -1,8 +1,8 @@
 import { Header } from './components/Header/Header'
 import { Footer } from './components/Footer/Footer'
 import { merienda, raleway } from './styles/fonts'
-import './styles/globals.scss'
 import { AuthProvider } from './context/AuthContext'
+import './styles/globals.scss'
 
 
 export const metadata = {
