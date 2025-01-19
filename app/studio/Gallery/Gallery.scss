@@ -32,6 +32,13 @@
 .gallery-dialog {
     position: relative;
     margin: auto;
+    max-width: 100vw;
+    max-height: fit-content;
+
+/*     @media screen and (min-width: $medium) {
+        width: 80%;
+        
+    } */
 
 
     &::backdrop {

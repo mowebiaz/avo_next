@@ -18,8 +18,9 @@ export function Carousel({ images, index, setIndex }) {
       <Image
         src={images[index].src}
         alt={images[index].alt}
-        width={images[index].width}
-        height={images[index].height}
+/*          width={images[index].width}
+        height={images[index].height}  */
+
       />
       <div className="buttons">
         <button
