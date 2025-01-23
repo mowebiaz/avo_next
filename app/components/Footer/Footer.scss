@@ -5,11 +5,14 @@ footer {
     width: 100vw;
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: $footer-color;
     color: $background-color;
     /*height: 2rem;*/
     padding: 0.5rem;
     p {
+        width: 100%;
+        padding: 0 1rem;
         font-size: 0.8rem;
         text-align: center;
     }

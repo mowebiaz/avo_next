@@ -4,8 +4,8 @@
     display: flex;
     max-width: fit-content;
     height: 100%;
-     justify-content: center;
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     position: relative;
     overflow: hidden;
 
@@ -13,8 +13,8 @@
         max-width: 100%;
         height: auto;
         object-fit: contain;
-    } 
-
+        border-radius: 5px;
+    }
 
     .prev,
     .next {
@@ -41,25 +41,21 @@
 
     .dots {
         position: absolute;
-        bottom: 10px;
+        bottom: 5px;
         width: 100%;
         text-align: center;
-        /*         left: 50%;
-            transform: translateX(-50%); */
         span {
             display: inline-block;
             width: 10px;
             height: 10px;
             border-radius: 50%;
-            background-color: #ccc;
             margin: 0 5px;
             cursor: pointer;
-            border: 2px solid black;
             background-color: $primary-color;
+            opacity: 0.8;
             &.active {
-                background-color: $primary-color;
                 opacity: 1;
-                border: 2px solid $primary-color;
+                outline: 2px solid $footer-color;
             }
         }
     }

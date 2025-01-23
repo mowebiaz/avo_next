@@ -48,8 +48,10 @@ export function AdminPriceTable() {
     try {
       await deleteMutlipleWeeks(weeksToDelete)
       setWeeksToDelete([])
+      alert('Semaine(s) supprimée(s)')
     } catch (error) {
       console.log('erreur', error)
+      alert('Les semaines n\'ont pas pu être supprimées')
     }
   }
 

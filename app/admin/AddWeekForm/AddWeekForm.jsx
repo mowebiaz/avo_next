@@ -19,9 +19,8 @@ export function AddWeekForm() {
     control,
     handleSubmit,
     register,
-    setError,
     reset,
-    formState: { errors, isSubtmitting, isSubmitSuccessful },
+    formState: { errors, isSubtmitting },
   } = useForm({
     defaultValues: {
       newWeek: [{ entryDate: '', dispo: false, price: '' }],
@@ -42,16 +41,16 @@ export function AddWeekForm() {
       entryDate: Timestamp.fromDate(new Date(week.entryDate)),
       price: Number(week.price),
     }))
+
     try {
       await addMultipleWeeks(formatedWeeksList)
+      alert('semaine(s) ajoutée(s)')
       reset()
       formRef.current.style.display = 'none'
       btnFormRef.current.style.display = 'flex'
-      /*      si succès (isSubmitSuccessful)
-      afficher un message de confirmation*/
     } catch (error) {
+      alert('Les semaines n\'ont pas pu étre ajoutées')  
       console.log(error)
-      /*si echec, afficher un message d'erreur */
     }
   }
 
@@ -60,6 +59,7 @@ export function AddWeekForm() {
       <div ref={btnFormRef}>
         <button className="btn-addweek" ref={btnFormRef} onClick={handleClick}>Ajouter une semaine</button>
       </div>
+
       <div
         ref={formRef}
         className="div-form"
@@ -73,9 +73,11 @@ export function AddWeekForm() {
             >
               <div>
                 {/* mettre htmlfor, id... ? */}
-                <label>Date d&apos;arrivée:</label>
+                <label htmlFor='date'>Date d&apos;arrivée:</label>
                 <input
                   type="date"
+                  id='date'
+                  name='date'
                   {...register(`newWeek.${index}.entryDate`, {
                     required: 'Veuillez renseigner la date',
                   })}
@@ -88,17 +90,21 @@ export function AddWeekForm() {
               </div>
 
               <div>
-                <label>Disponible ?</label>
+                <label htmlFor='dispo'>Disponible ?</label>
                 <input
                   type="checkbox"
+                  id='dispo'
+                  name='dispo'
                   {...register(`newWeek.${index}.dispo`)}
                 />
               </div>
 
               <div>
-                <label>Prix (€):</label>
+                <label htmlFor='price'>Prix (€):</label>
                 <input
                   type="number"
+                  id='price'
+                  name='price'
                   {...register(`newWeek.${index}.price`, {
                     required: 'Veuillez renseigner le prix',
                   })}
@@ -120,11 +126,11 @@ export function AddWeekForm() {
           >
             <IoMdAddCircle />
           </button>
+
           <button
             type="submit"
             disabled={isSubtmitting}
           >
-            {/* revoir l'état du bouton */}
             {isSubtmitting ? 'loader' : 'Envoyer'}
           </button>
         </form>

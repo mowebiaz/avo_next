@@ -9,7 +9,6 @@ import {
   orderBy,
 } from 'firebase/firestore'
 
-/* voir const unsubscribe */
 export async function getWeeks() {
   const weeksCollection = collection(db, 'weeks')
   const q = query(weeksCollection, orderBy('entryDate', 'asc'))
