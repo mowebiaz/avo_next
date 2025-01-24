@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@formspree/react": "^2.5.1",
     "@googlemaps/js-api-loader": "^1.16.8",
     "firebase": "^11.1.0",

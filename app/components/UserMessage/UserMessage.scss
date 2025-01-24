@@ -1,3 +1,5 @@
+@use '@/app/styles/mixins' as *;
+
 .message-alert {
     display: flex;
     align-items: center;
@@ -25,16 +27,7 @@
 }
 
 .message-error {
-    display: flex;
-    align-items: center;
-    padding: 0.5rem;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 2px;
-    font-size: 1rem;
-    gap: 1rem;
-    border-color: #fd0d0d;
-    background-color: #ffd6d6;
+    @include messageError;
     &-icon {
         border-radius: 50%;
         width: 2rem;

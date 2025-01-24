@@ -18,8 +18,14 @@ export function AccesContent() {
       <section>
         <h2 id="studio">Accéder au studio</h2>
         <p>
-          Notre studio se trouve dans la résidence Pas du Lac (n°41 sur le plan
-          de la station).
+          Notre studio se trouve dans la résidence Pas du Lac (n°41 sur le 
+          <LinkAria
+            className="link"
+            href={'https://www.avoriaz.com/decouvrir/plans--guide/plan-station-avoriaz/#plan-hiver'}
+            target="_blank"
+            referrerPolicy="no-opener no-referrer"
+          >
+            plan de la station</LinkAria>).
         </p>
         <MapGoogle/>
         <p>

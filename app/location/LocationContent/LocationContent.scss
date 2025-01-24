@@ -1,4 +1,5 @@
 @use '@/app/styles/variables' as *;
+@use '@/app/styles/mixins' as *;
 
 .conditions {
     /*     a {
@@ -6,14 +7,10 @@
     } */
     a.link {
         &:hover {
-            background-color: $secondary-color;
-            color: $footer-color;
-            color: black;
-            border-radius: 5px;
-            text-decoration: none;
+            @include linkrouterHover;
         }
     }
-    
+
     ol {
         list-style-type: none;
         list-style-position: inside;

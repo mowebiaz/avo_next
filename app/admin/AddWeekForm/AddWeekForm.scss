@@ -56,27 +56,8 @@
                     }
                 }
                 input[type='checkbox'] {
-                    appearance: none;
+                    @include checkbox;
                     margin: auto;
-                    width: 1.5rem;
-                    height: 1.5rem;
-                    position: relative;
-                    transition: all 0.2s ease-in-out;
-                    &::after {
-                        content: '';
-                        display: block;
-                        width: 8px;
-                        height: 14px;
-                        border: solid $footer-color;
-                        border-width: 0 2px 2px 0;
-                        transform: rotate(45deg);
-                        position: absolute;
-                        top: 2px;
-                        left: 6px;
-                    }
-                    &:not(:checked)::after {
-                        display: none;
-                    }
                 }
             }
         }

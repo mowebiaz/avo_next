@@ -16,14 +16,16 @@
     flex-direction: column;
 
     h2 {
-        background-color: $footer-color;
-        color: $background-color;
-        opacity: 0.7;
         scroll-margin-top: 4rem; /* height of sticky header */
+        border-top: 2px solid $secondary-color;
+        border-bottom: 2px solid $secondary-color;
+        text-align: center;
+        text-shadow: 1px 1px 1px $secondary-color;
     }
 
     h4 {
         margin-top: 0.5rem;
+        text-align: center;
     }
     .line-title {
         .icon-container {

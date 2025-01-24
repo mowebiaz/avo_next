@@ -1,21 +1,65 @@
 @use './variables' as *;
 
 @mixin buttonLink {
-  font-weight: 600;
-  font-size: 1.25rem;
-  display: inline-block;
-  background-color: $footer-color;
-  color: $primary-color;
-  text-decoration: none;
-  font-family: var(--font-raleway);
-  padding: 0.5rem 1rem;
-  margin: 0.5rem;
-  border-radius: 8px;
-  box-shadow: 1.4px 1.4px 1.4px rgba(0, 0, 0, 0.02),
-      3.3px 3.3px 3.3px rgba(0, 0, 0, 0.028),
-      6.1px 6.1px 6.1px rgba(0, 0, 0, 0.035),
-      10.9px 10.9px 10.9px rgba(0, 0, 0, 0.042),
-      20.5px 20.5px 20.5px rgba(0, 0, 0, 0.05),
-      49px 49px 49px rgba(0, 0, 0, 0.07);
-  transition: all 0.2s ease-in-out;
+    font-weight: 600;
+    font-size: 1.25rem;
+    display: inline-block;
+    background-color: $footer-color;
+    color: $primary-color;
+    text-decoration: none;
+    font-family: var(--font-raleway);
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 1.4px 1.4px 1.4px rgba(0, 0, 0, 0.02),
+        3.3px 3.3px 3.3px rgba(0, 0, 0, 0.028),
+        6.1px 6.1px 6.1px rgba(0, 0, 0, 0.035),
+        10.9px 10.9px 10.9px rgba(0, 0, 0, 0.042),
+        20.5px 20.5px 20.5px rgba(0, 0, 0, 0.05),
+        49px 49px 49px rgba(0, 0, 0, 0.07);
+    transition: all 0.2s ease-in-out;
+}
+
+@mixin linkrouterHover {
+    background-color: $secondary-color;
+    color: $footer-color;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+@mixin checkbox {
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    &::after {
+        content: '';
+        display: block;
+        width: 8px;
+        height: 14px;
+        border: solid $footer-color;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 2px;
+        left: 6px;
+    }
+    &:not(:checked)::after {
+        display: none;
+    }
+}
+
+@mixin messageError {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 1rem;
+    gap: 1rem;
+    border-color: #fd0d0d;
+    background-color: #ffd6d6;
 }
