@@ -1,4 +1,4 @@
-import { ContactFormmodif } from "./ContactForm/ContactFormmodif"
+import { ContactForm } from "./ContactForm/ContactForm"
 
 export const metadata = {
   title: "Contact",
@@ -10,7 +10,7 @@ export default function Contact() {
   return (
     <main className="contact">
       <h1>Contact</h1>
-      <ContactFormmodif />
+      <ContactForm/>
     </main>
   )
 }
