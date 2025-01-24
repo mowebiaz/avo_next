@@ -7,6 +7,7 @@ import {
   writeBatch,
   query,
   orderBy,
+  where,
 } from 'firebase/firestore'
 
 export async function getWeeks() {
@@ -23,6 +24,23 @@ export async function updateDispo(id, newDispo) {
     await updateDoc(weekRef, { dispo: newDispo })
   } catch (error) {
     console.error('Error updating document: ', error)
+  }
+}
+
+export async function checkIfWeekExists(entryDate) {
+  try {
+    const weeksRef = collection(db, 'weeks')
+    const weekQuery = query(
+      weeksRef,
+      where('entryDate', '==', new Date(entryDate))
+    )
+    const querySnapshot = await getDocs(weekQuery)
+
+    // Retourne `true` si la semaine existe déjà
+    return !querySnapshot.empty
+  } catch (error) {
+    console.error('Erreur lors de la vérification de la semaine :', error)
+    return false // En cas d'erreur, retourne `false` pour éviter de bloquer
   }
 }
 

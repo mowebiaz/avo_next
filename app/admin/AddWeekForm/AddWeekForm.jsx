@@ -1,8 +1,10 @@
 import { useRef } from 'react'
 import { useFieldArray, useForm } from 'react-hook-form'
-import { doc, Timestamp } from 'firebase/firestore'
-import { addMultipleWeeks } from '@/app/lib/firebase/firestore'
-import { UserMessage } from '@/app/components/UserMessage/UserMessage'
+import { Timestamp } from 'firebase/firestore'
+import {
+  addMultipleWeeks,
+  checkIfWeekExists,
+} from '@/app/lib/firebase/firestore'
 import { IoMdAddCircle } from 'react-icons/io'
 import './AddWeekForm.scss'
 
@@ -49,7 +51,7 @@ export function AddWeekForm() {
       formRef.current.style.display = 'none'
       btnFormRef.current.style.display = 'flex'
     } catch (error) {
-      alert('Les semaines n\'ont pas pu étre ajoutées')  
+      alert("Les semaines n'ont pas pu étre ajoutées")
       console.log(error)
     }
   }
@@ -57,7 +59,13 @@ export function AddWeekForm() {
   return (
     <>
       <div ref={btnFormRef}>
-        <button className="btn-addweek" ref={btnFormRef} onClick={handleClick}>Ajouter une semaine</button>
+        <button
+          className="btn-addweek"
+          ref={btnFormRef}
+          onClick={handleClick}
+        >
+          Ajouter une semaine
+        </button>
       </div>
 
       <div
@@ -73,13 +81,17 @@ export function AddWeekForm() {
             >
               <div>
                 {/* mettre htmlfor, id... ? */}
-                <label htmlFor='date'>Date d&apos;arrivée:</label>
+                <label htmlFor="date">Date d&apos;arrivée:</label>
                 <input
                   type="date"
-                  id='date'
-                  name='date'
+                  id="date"
+                  name="date"
                   {...register(`newWeek.${index}.entryDate`, {
                     required: 'Veuillez renseigner la date',
+                    validate: async (value) => {
+                      const exists = await checkIfWeekExists(value)
+                      return !exists || 'Cette semaine existe déjà.'
+                    },
                   })}
                 />
                 {errors?.newWeek?.[index]?.entryDate && (
@@ -90,21 +102,21 @@ export function AddWeekForm() {
               </div>
 
               <div>
-                <label htmlFor='dispo'>Disponible ?</label>
+                <label htmlFor="dispo">Disponible ?</label>
                 <input
                   type="checkbox"
-                  id='dispo'
-                  name='dispo'
+                  id="dispo"
+                  name="dispo"
                   {...register(`newWeek.${index}.dispo`)}
                 />
               </div>
 
               <div>
-                <label htmlFor='price'>Prix (€):</label>
+                <label htmlFor="price">Prix (€):</label>
                 <input
                   type="number"
-                  id='price'
-                  name='price'
+                  id="price"
+                  name="price"
                   {...register(`newWeek.${index}.price`, {
                     required: 'Veuillez renseigner le prix',
                   })}
