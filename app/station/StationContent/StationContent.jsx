@@ -75,6 +75,8 @@ export function StationContent() {
             placeholder="blur"
             quality={100}
             fill
+            sizes='(max-width: 920px) 100vw, 50vw'
+
           />
         </div>
         <div className="image-container">
@@ -85,6 +87,7 @@ export function StationContent() {
             placeholder="blur"
             quality={100}
             fill
+            sizes='(max-width: 920px) 100vw, 50vw'
           />
         </div>
       </div>

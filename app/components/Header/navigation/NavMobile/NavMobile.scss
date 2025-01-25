@@ -1,5 +1,7 @@
 @use '@/app/styles/variables' as *;
 
+
+
 .burger-button {
     display: flex;
     align-items: center;
@@ -8,7 +10,7 @@
 
 .nav-mobile {
     position: fixed;
-    top: 4rem; /* height of sticky header */
+    top: 4rem; /* height of sticky header*/
     right: 0;
     width: 100vw;
     padding: 0.5rem 0;
@@ -21,6 +23,7 @@
         align-items: center;
         justify-content: center;
         gap: 1rem;
+
         li a {
             color: $primary-color;
             font-weight: 500;
@@ -28,7 +31,19 @@
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
-            svg {
+            border-radius: 8px;
+            border: 1px solid transparent;
+            color: $primary-color;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 0.3rem;
+            transition: all 0.25s ease;
+            &.active {
+                background-color: $primary-color;
+                color: $footer-color;
+            }
+            &:hover {
+                border-color: $primary-color;
             }
         }
     }

@@ -12,6 +12,7 @@ export function Footer() {
 
   return (
     <footer>
+      <div className='footer-text'>
       <p>
         Codé avec ❤️ par{' '}
         <LinkAria
@@ -24,12 +25,17 @@ export function Footer() {
         </LinkAria>
         - © {new Date().getFullYear()} Tous droits reservés
       </p>
+      <p>
+        <Link href="/mentions-legales" className='legal-link'>Mentions légales</Link>{' '}-{' '}
+        <Link href="/politique-de-confidentialite" className='legal-link'>Politique de confidentialité</Link>
+      </p>
+      </div>
       {user ? (
         <Link
           className="link-admin"
           href="/admin"
         >
-          page Admin
+          Dashboard
         </Link>
       ) : (
         <ButtonLink

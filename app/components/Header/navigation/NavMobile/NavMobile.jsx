@@ -41,16 +41,17 @@ export function NavMobile() {
           aria-label="Menu"
         >
           <ul>
-            {routeList.map((route) => {
-              return (
-                <li key={route.name}>
-                  <a href={route.path}>{route.icon}{route.name}</a>
-{/*                   <ActiveLink key={route.name} href={route.path} activeClassName="active">
-                {route.name}
-              </ActiveLink> */}
-                </li>
-              )
-            })}
+            {routeList.map(({ name, path, icon }) => (
+              <li
+                key={name}
+                onClick={toggleMenu}
+              >
+                <ActiveLink href={path} activeClassName="active">
+                  {icon}
+                  {name}
+                </ActiveLink>
+              </li>
+            ))}
           </ul>
         </nav>
       )}
