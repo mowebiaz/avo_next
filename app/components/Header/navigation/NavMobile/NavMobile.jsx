@@ -5,6 +5,7 @@ import { BurgerIcon } from '../../BurgerIcon/BurgerIcon'
 import { routeList } from '../routeList'
 import { ActiveLink } from '../NavDestkop/ActiveLink/ActiveLink'
 import { useClickAway } from 'react-use'
+import { FaSnowflake } from 'react-icons/fa6'
 import './NavMobile.scss'
 
 export function NavMobile() {
@@ -41,12 +42,27 @@ export function NavMobile() {
           aria-label="Menu"
         >
           <ul>
+            <li
+              key="Home"
+              onClick={toggleMenu}
+            >
+              <ActiveLink
+                href="/"
+                activeClassName="active"
+              >
+                <FaSnowflake />
+                Accueil
+              </ActiveLink>
+            </li>
             {routeList.map(({ name, path, icon }) => (
               <li
                 key={name}
                 onClick={toggleMenu}
               >
-                <ActiveLink href={path} activeClassName="active">
+                <ActiveLink
+                  href={path}
+                  activeClassName="active"
+                >
                   {icon}
                   {name}
                 </ActiveLink>

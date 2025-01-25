@@ -1,26 +1,41 @@
 @use '@/app/styles/variables' as *;
+@use 'sass:color';
 
-
+.mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    background-color: $footer-color;
+}
 
 .burger-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+/*     border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%; */
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: $footer-color;
+    filter: opacity(0.8);
 }
 
 .nav-mobile {
     position: fixed;
-    top: 4rem; /* height of sticky header*/
+    top: 0;
     right: 0;
-    width: 100vw;
-    padding: 0.5rem 0;
+    padding: 5rem 1rem 2rem 1rem;
     background-color: $footer-color;
+    border-bottom-left-radius: 0.5rem;
 
     ul {
         list-style: none;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items:center;
         justify-content: center;
         gap: 1rem;
 
@@ -36,7 +51,7 @@
             color: $primary-color;
             text-decoration: none;
             text-transform: uppercase;
-            padding: 0.3rem;
+            padding: 0.1rem;
             transition: all 0.25s ease;
             &.active {
                 background-color: $primary-color;

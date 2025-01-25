@@ -1,4 +1,19 @@
 @use '@/app/styles/variables' as *;
+@use 'sass:color';
+
+.desktop {
+position: fixed;
+top: 0;
+  right: 0;
+  width: 100vw;
+  min-height: 4rem;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  /*z-index: 99;*/
+  background-color: $footer-color; 
+  box-shadow: 0 3px 10px color.scale($footer-color, $alpha: -20%);
+}
 
 .nav-desktop {
     width: 100%;
@@ -43,7 +58,7 @@
 }
 
 @media screen and (max-width: $medium) {
-    .nav-desktop {
+    .desktop {
         display: none;
     }
 }

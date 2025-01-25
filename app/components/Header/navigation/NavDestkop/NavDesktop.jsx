@@ -2,9 +2,14 @@ import Link from 'next/link'
 import { routeList } from '../routeList'
 import { ActiveLink } from './ActiveLink/ActiveLink'
 import './NavDesktop.scss'
+import { LogoContainer } from '../../LogoContainer/LogoContainer'
 
 export function NavDesktop() {
   return (
+    <div className='desktop'>
+      <LogoContainer />
+
+    
     <nav
       className="nav-desktop"
       aria-label="Menu"
@@ -24,5 +29,6 @@ export function NavDesktop() {
         })}
       </ul>
     </nav>
+    </div>
   )
 }

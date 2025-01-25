@@ -7,7 +7,7 @@ import './Header.scss'
 export function Header() {
   return (
     <header>
-      <LogoContainer />
+      {/* <LogoContainer /> */}
       <NavDesktop />
       <NavMobile />
     </header>

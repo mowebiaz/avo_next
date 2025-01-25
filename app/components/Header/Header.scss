@@ -3,11 +3,7 @@
 header {
   position: sticky;
   top: 0;
-  width: 100vw;
-  min-height: 4rem;
-  display: flex;
-  justify-content:space-between;
-  align-items: center;
   z-index: 99;
-  background-color: $footer-color;
 }
+
+
