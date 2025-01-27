@@ -53,7 +53,7 @@ body {
     align-items: center;
     color: $font-color;
     background: $background-color;
-    font-family: var(--font-raleway);
+    font-family: var(--font-raleway), sans-serif;
     line-height: 1.5;
     font-size: clamp(1.2rem, 1.171rem + 0.123vw, 1.25rem);
     -webkit-font-smoothing: antialiased;
@@ -69,16 +69,13 @@ margin-top: 2rem;
         @media screen and (min-width: $medium) {
           margin-top: 5rem;
         }
-        
-
-    /*margin-top:4rem;*/
     margin-bottom: 1rem;
     width: 85vw;
     max-width: $max-width;
 }
 
 h1 {
-    font-family: var(--font-merienda);
+    font-family: var(--font-merienda), cursive;
     text-align: center;
     font-size: clamp(1.6rem, 1.369rem + 0.985vw, 2rem);
     text-wrap: balance;
