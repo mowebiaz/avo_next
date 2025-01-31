@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import HomeBackground from '@/public/images/home_background.webp'
+import HomeBackground from '../../../public/images/home_background.webp'
 import './HomePictureContainer.scss'
 
 
