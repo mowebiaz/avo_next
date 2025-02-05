@@ -34,6 +34,7 @@ export function Footer() {
         <Link
           className="link-admin"
           href="/admin"
+          aria-label="Admin page"
         >
           Dashboard
         </Link>
@@ -41,6 +42,7 @@ export function Footer() {
         <ButtonLink
           className="button-login"
           href="/login"
+          aria-label="Login as administrator"
         >
           <FaRegUserCircle />
         </ButtonLink>

@@ -18,6 +18,7 @@ export function Carousel({ images, index, setIndex }) {
       <Image
         src={images[index].src}
         alt={images[index].alt}
+        quality={100}
 /*          width={images[index].width}
         height={images[index].height}  */
 

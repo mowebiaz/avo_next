@@ -1,0 +1,19 @@
+@use './styles/variables' as *;
+@use './styles/mixins' as *;
+
+.not-found {
+  justify-content: center;
+  gap:1rem;
+  text-align: center;
+
+  a {
+    background-color: transparent;
+    text-decoration: underline dotted $footer-color 2px;
+    text-underline-offset: 3px;
+    padding: 5px;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      @include linkrouterHover;
+    }
+  }
+}
