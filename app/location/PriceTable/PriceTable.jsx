@@ -2,8 +2,15 @@ import { getWeeks } from '../../lib/firebase/firestore'
 import { addDaysToDate } from '../../lib/utils/date'
 import './PriceTable.scss'
 
-export async function PriceTable() {
-  const weeks = await getWeeks()
+export async function getServerSideProps() {
+  const weeks = await getWeeks(); // Récupère les données Firestore en temps réel
+  return {
+    props: { weeks }, // Passe les données en tant que props à ton composant
+  };
+}
+
+export function PriceTable({weeks}) {
+  /*const weeks = await getWeeks()*/
   return (
     <div>
       <h3>Hiver 2024-2025</h3>
