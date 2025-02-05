@@ -1,9 +1,29 @@
+'use client'
+
+import { useEffect, useState } from 'react';
 import { getWeeks } from '../../lib/firebase/firestore'
 import { addDaysToDate } from '../../lib/utils/date'
 import './PriceTable.scss'
 
-export async function PriceTable() {
-  const weeks = await getWeeks()
+export function PriceTable() {
+  /*const weeks = await getWeeks()*/
+
+  const [weeks, setWeeks] = useState([]);
+
+  useEffect(() => {
+    const fetchWeeks = async () => {
+      const updatedWeeks = await getWeeks();
+      setWeeks(updatedWeeks);
+    };
+
+    fetchWeeks();
+
+/*     Optionnel : rafraîchir toutes les 30 secondes pour éviter le cache
+    const interval = setInterval(fetchWeeks, 30000);
+
+    return () => clearInterval(interval); */
+  }, []);
+
   return (
     <div>
       <h3>Hiver 2024-2025</h3>
