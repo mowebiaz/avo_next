@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useForm } from 'react-hook-form'
 import emailjs from '@emailjs/browser'
 import Link from 'next/link'
+import { Loader } from '@/app/components/Loader/loader'
 import { IoMdCloseCircle } from 'react-icons/io'
 import './ContactForm.scss'
 
@@ -130,7 +131,7 @@ export function ContactForm() {
           type="submit"
           disabled={isSubmitting}
         >
-          {isSubmitting ? 'loader' : 'Envoyer'}
+          {isSubmitting ? <Loader/> : 'Envoyer'}
         </button>
       <dialog ref={dialogRef} className='contact-dialog'>
         {isSubmitSuccessful ? (

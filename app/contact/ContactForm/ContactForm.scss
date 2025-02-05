@@ -71,7 +71,7 @@
     button[type='submit'] {
         @include buttonLink;
         border: 1px solid $primary-color;
-        width: max-content;
+        min-width: 110px;
         align-self: center;
         &:hover {
             background-color: $primary-color;
@@ -80,6 +80,10 @@
             border-radius: 5px;
             text-decoration: none;
         }
+    }
+
+    .loader {
+        animation: spin 1s linear infinite;
     }
 
     .contact-dialog {
@@ -104,3 +108,12 @@
         }
     }
 }
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
