@@ -13,7 +13,7 @@ import {
 export async function getWeeks() {
   const weeksCollection = collection(db, 'weeks')
   const q = query(weeksCollection, orderBy('entryDate', 'asc'))
-  const weeksSnapshot = await getDocs(q, { source: 'server' });
+  const weeksSnapshot = await getDocs(q);
   const weeks = weeksSnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
   return weeks
 }
