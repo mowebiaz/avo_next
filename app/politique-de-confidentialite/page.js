@@ -1,3 +1,10 @@
+export const metadata = {
+  title: "Politique de confidentialité",
+  alternates: {
+    canonical: 'https://avoriazloc.fr/politique-de-confidentialite',
+  }
+}
+
 export default function PolitiqueDeConfidentialite() {
   return (
     <main className="confidentiality">

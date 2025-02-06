@@ -14,10 +14,10 @@ export const metadata = {
   openGraph: {
     type: 'website',
     siteName: 'AvoriazLoc',
-     /*url: 'https://www.morganeweb.dev/', avoriazloc.fr*/
+     url: 'https://avoriazloc.fr',
    },
    alternates: {
-    /*anonical: 'https://morganeweb.com/',*/
+    canonical: 'https://avoriazloc.fr',
   }
 }
 

@@ -1,8 +1,11 @@
-import { FilterByCategories } from "./FilterByCategories/FilterByCategories"
+import { FilterByCategories } from './FilterByCategories/FilterByCategories'
 
 export const metadata = {
-  title: "Liens",
-  description: "Liens utiles à Avoriaz - Ski, Activités et Trajets"
+  title: 'Liens',
+  description: 'Liens utiles à Avoriaz - Ski, Activités et Trajets',
+  alternates: {
+    canonical: 'https://avoriazloc.fr/liens',
+  },
 }
 
 export default function Liens() {

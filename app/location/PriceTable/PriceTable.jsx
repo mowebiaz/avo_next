@@ -6,8 +6,6 @@ import { addDaysToDate } from '../../lib/utils/date'
 import './PriceTable.scss'
 
 export function PriceTable() {
-  /*const weeks = await getWeeks()*/
-
   const [weeks, setWeeks] = useState([]);
 
   useEffect(() => {
@@ -17,11 +15,6 @@ export function PriceTable() {
     };
 
     fetchWeeks();
-
-/*     Optionnel : rafraîchir toutes les 30 secondes pour éviter le cache
-    const interval = setInterval(fetchWeeks, 30000);
-
-    return () => clearInterval(interval); */
   }, []);
 
   return (
