@@ -2,6 +2,7 @@ import { Header } from './components/Header/Header'
 import { Footer } from './components/Footer/Footer'
 import { merienda, raleway } from './styles/fonts'
 import { AuthProvider } from './context/AuthContext'
+import { CookieBanner } from './components/CookieBanner/CookieBanner'
 import './styles/globals.scss'
 
 
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
       </AuthProvider>
+      <CookieBanner />
       </body>
     </html>
   )

@@ -1,0 +1,80 @@
+'use client'
+
+import { useEffect, useState } from 'react'
+import Script from 'next/script'
+import { getCookie, setCookie } from 'cookies-next'
+import { Button } from 'react-aria-components'
+import './CookieBanner.scss'
+
+export function CookieBanner() {
+  const [cookiesAccepted, setCookiesAccepted] = useState(false)
+  const [showBanner, setShowBanner] = useState(false)
+
+  /*   useEffect(() => {
+    const storedCookiesAccepted = localStorage.getItem('cookiesAccepted')
+    if (storedCookiesAccepted) {
+      setCookiesAccepted(true)
+    }
+  }, []) */
+
+  useEffect(() => {
+    const consent = getCookie('cookiesAccepted')
+    if (consent === 'true') {
+      setCookiesAccepted(true)
+    } else if (consent === undefined) {
+      setShowBanner(true)
+    }
+  }, [])
+
+  const acceptCookies = () => {
+    setCookie('cookiesAccepted', 'true', { maxAge: 365 * 24 * 60 * 60 })
+    setCookiesAccepted(true)
+    setShowBanner(false)
+  }
+
+  const declineCookies = () => {
+    setCookie('cookiesAccepted', 'false', { maxAge: 365 * 24 * 60 * 60 })
+    setCookiesAccepted(false)
+    setShowBanner(false)
+  }
+
+  return (
+    <>
+      {cookiesAccepted && (
+        <>
+          <Script
+            strategy="afterInteractive"
+            src="https://www.googletagmanager.com/gtag/js?id=G-R8XF1ZDVGT"
+          />
+          <Script
+            id="google-analytics"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-R8XF1ZDVGT', {
+              page_path: window.location.pathname,});
+          `,
+            }}
+          />
+        </>
+      )}
+
+      {showBanner && (
+        <div className="cookie-banner">
+          <p>
+            Ce site utilise des cookies pour vous fournir une meilleure
+            expérience de navigation. En continuant à utiliser ce site, vous
+            acceptez l&apos;utilisation de cookies.
+          </p>
+          <div className="buttons">
+            <Button onPress={acceptCookies}>Accepter</Button>
+            <Button onPress={declineCookies}>Refuser</Button>
+          </div>
+        </div>
+      )}
+    </>
+  )
+}
