@@ -8,6 +8,13 @@ export function MapGoogle() {
   const mapRef = useRef(null)
 
   useEffect(() => {
+    const addPassiveEventListener = (eventName) => {
+      document.addEventListener(eventName, () => {}, { passive: true })
+    }
+  
+    addPassiveEventListener('touchmove')
+    addPassiveEventListener('wheel')
+    
     const initMap = async () => {
       const loader = new Loader({
         apiKey: process.env.NEXT_PUBLIC_MAPS_API_KEY,
