@@ -1,5 +1,5 @@
 import { FaRegWindowClose } from 'react-icons/fa'
-import { IoIosCloseCircleOutline } from 'react-icons/io'
+import { MdClose } from "react-icons/md";
 import './FilterTag.scss'
 
 export function FilterTag({
@@ -29,7 +29,7 @@ export function FilterTag({
           >
             {category}
             {selectedCategories.includes(category) ? (
-              <IoIosCloseCircleOutline />
+              <MdClose />
             ) : null}
           </button>
         ))}

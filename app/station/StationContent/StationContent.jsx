@@ -75,6 +75,7 @@ export function StationContent() {
             placeholder="blur"
             quality={100}
             fill
+            priority
             sizes='(max-width: 920px) 100vw, 50vw'
 
           />
@@ -87,6 +88,7 @@ export function StationContent() {
             placeholder="blur"
             quality={100}
             fill
+            priority
             sizes='(max-width: 920px) 100vw, 50vw'
           />
         </div>
