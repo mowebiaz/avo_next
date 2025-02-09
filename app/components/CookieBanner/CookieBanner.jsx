@@ -36,12 +36,14 @@ export function CookieBanner() {
       {cookiesAccepted && (
         <>
           <Script
-            strategy="afterInteractive"
+          strategy='lazyOnload'
+            /*strategy="afterInteractive"*/
             src="https://www.googletagmanager.com/gtag/js?id=G-R8XF1ZDVGT"
           />
           <Script
             id="google-analytics"
-            strategy="afterInteractive"
+            /*strategy="afterInteractive"*/
+            strategy="lazyOnload"
             dangerouslySetInnerHTML={{
               __html: `
             window.dataLayer = window.dataLayer || [];
