@@ -27,6 +27,23 @@
     text-decoration: none;
 }
 
+@mixin linkAria {
+    background-color: transparent;
+    text-decoration: underline dotted $footer-color 2px;
+    text-underline-offset: 3px;
+    outline: none;
+    padding: 5px;
+    transition: all 200ms ease-in-out;
+    &[data-hovered],
+    &[data-pressed] {
+        background-color: $secondary-color;
+        color: $footer-color;
+        color: black;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+}
+
 @mixin checkbox {
     appearance: none;
     width: 1.5rem;

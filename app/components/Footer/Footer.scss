@@ -9,7 +9,6 @@ footer {
     justify-content: center;
     background-color: $footer-color;
     color: $background-color;
-    /*height: 2rem;*/
     padding: 0.5rem;
     .footer-text {
         display: flex;
@@ -19,8 +18,6 @@ footer {
         padding: 0 1rem;
         font-size: 0.8rem;
         text-align: center;
-/*         margin-left: 50%;
-        transform: translateX(-50%); */
     }
 
     .link {
@@ -28,10 +25,7 @@ footer {
     }
 
     .legal-link {
-        padding: 5px;
-        &:hover {
-            @include linkrouterHover;
-        }
+        @include linkAria;
     }
 
     .link-admin {

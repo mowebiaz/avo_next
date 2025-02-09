@@ -3,19 +3,12 @@
 import { useEffect, useState } from 'react'
 import Script from 'next/script'
 import { getCookie, setCookie } from 'cookies-next'
-import { Button } from 'react-aria-components'
+import { Button, Link } from 'react-aria-components'
 import './CookieBanner.scss'
 
 export function CookieBanner() {
   const [cookiesAccepted, setCookiesAccepted] = useState(false)
   const [showBanner, setShowBanner] = useState(false)
-
-  /*   useEffect(() => {
-    const storedCookiesAccepted = localStorage.getItem('cookiesAccepted')
-    if (storedCookiesAccepted) {
-      setCookiesAccepted(true)
-    }
-  }, []) */
 
   useEffect(() => {
     const consent = getCookie('cookiesAccepted')
@@ -67,7 +60,7 @@ export function CookieBanner() {
           <p>
             Ce site utilise des cookies pour vous fournir une meilleure
             expérience de navigation. En continuant à utiliser ce site, vous
-            acceptez l&apos;utilisation de cookies.
+            acceptez l&apos;utilisation de cookies. Voir notre <Link href="/politique-de-confidentialite" className="link">politique de confidentialité</Link>.
           </p>
           <div className="buttons">
             <Button onPress={acceptCookies}>Accepter</Button>

@@ -1,8 +1,7 @@
-import Link from 'next/link'
 import { routeList } from '../routeList'
 import { ActiveLink } from './ActiveLink/ActiveLink'
-import './NavDesktop.scss'
 import { LogoContainer } from '../../LogoContainer/LogoContainer'
+import './NavDesktop.scss'
 
 export function NavDesktop() {
   return (
@@ -22,9 +21,6 @@ export function NavDesktop() {
                 {route.name}
               </ActiveLink>
             </li>
-/*             <li key={route.name}>
-              <a href={route.path}>{route.name}</a>
-            </li> */
           )
         })}
       </ul>

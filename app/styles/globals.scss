@@ -22,7 +22,7 @@ body {
     align-items: center;
     color: $font-color;
     background: $background-color;
-    font-family: var(--font-raleway), sans-serif;
+    font-family: var(--font-raleway), Arial, Helvetica, sans-serif;
     line-height: 1.5;
     font-size: clamp(1.2rem, 1.171rem + 0.123vw, 1.25rem);
     -webkit-font-smoothing: antialiased;
@@ -44,7 +44,7 @@ margin-top: 2rem;
 }
 
 h1 {
-    font-family: var(--font-merienda), cursive;
+    font-family: var(--font-merienda), "Brush Script MT", "Comic Sans MS", cursive;
     text-align: center;
     font-size: clamp(1.6rem, 1.369rem + 0.985vw, 2rem);
     text-wrap: balance;

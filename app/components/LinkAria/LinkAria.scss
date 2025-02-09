@@ -4,6 +4,7 @@
     background-color: transparent;
     text-decoration: underline dotted $footer-color 2px;
     text-underline-offset: 3px;
+    outline: none;
     padding: 5px;
     transition: all 200ms ease-in-out;
     &[data-hovered],
