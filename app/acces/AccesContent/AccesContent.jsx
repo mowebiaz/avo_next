@@ -1,4 +1,4 @@
-import { MapGoogle } from '../../components/mapGoogle/mapGoogle'
+import  {MapGoogle}  from '../../components/mapGoogle/mapGoogle'
 import { LinkAria } from '@/app/components/LinkAria/LinkAria'
 import { TitleWithIcon } from '../../components/TitleWithIcon/TitleWithIcon'
 import { FaCar, FaPlaneDeparture } from 'react-icons/fa'
@@ -28,6 +28,7 @@ export function AccesContent() {
             plan de la station</LinkAria>).
         </p>
         <MapGoogle/>
+
         <p>
           Avoriaz étant une station sans voiture, vous devrez vous garer et
           accéder au studio par d&apos;autres moyens de transport: à pied, en
