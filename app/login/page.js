@@ -11,6 +11,7 @@ import { IoAlertOutline, IoClose } from 'react-icons/io5'
 export default function Login() {
   const [error, setError] = useState(null)
   const router = useRouter()
+  const { user } = useAuth()
 
   const handleLogin = async (email, password) => {
     try {
