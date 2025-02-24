@@ -1,6 +1,7 @@
 'use client'
 
 import { useAuth } from '../../context/AuthContext'
+import { useSessionStorage } from 'react-use'
 import { ButtonLink } from '../ButtonLink/ButtonLink'
 import { FaRegUserCircle } from 'react-icons/fa'
 import { LinkAria } from '../LinkAria/LinkAria'
@@ -8,7 +9,7 @@ import { Link } from 'react-aria-components'
 import './Footer.scss'
 
 export function Footer() {
-  const { user } = useAuth()
+  const { isSignedIn } = useAuth();
 
   return (
     <footer>
@@ -30,7 +31,7 @@ export function Footer() {
         <Link href="/politique-de-confidentialite" className='legal-link'>Politique de confidentialité</Link>
       </p>
       </div>
-      {user ? (
+      {isSignedIn ? (
         <Link
           className="link-admin"
           href="/admin"
