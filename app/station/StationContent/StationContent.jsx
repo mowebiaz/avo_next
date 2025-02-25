@@ -73,10 +73,10 @@ export function StationContent() {
             src={Winter}
             alt="Vue panoramique de la station de ski d'Avoriaz en hiver"
             placeholder="blur"
-            quality={100}
-            fill
+/*             width={795}
+            height={450} */
             priority
-            sizes='(max-width: 920px) 100vw, 50vw'
+            sizes='(max-width: 920px) 80vw, (max-width: 1440px) 40vw, 566px'
 
           />
         </div>
@@ -86,8 +86,8 @@ export function StationContent() {
             src={Summer}
             alt="Vue panoramique de la station de ski d'Avoriaz en été"
             placeholder="blur"
-            quality={100}
-            fill
+/*             width={943}
+            height={450} */
             priority
             sizes='(max-width: 920px) 100vw, 50vw'
           />
