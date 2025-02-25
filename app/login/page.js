@@ -16,14 +16,11 @@ export default function Login() {
   const handleLogin = async (email, password) => {
     try {
       await login(email, password)
+      router.push('/admin')
     } catch (error) {
       console.error(error)
       setError(error)
     }
-  }
-
-  if (user) {
-    router.push('/admin')
   }
 
   return (

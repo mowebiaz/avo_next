@@ -44,7 +44,7 @@ export function Gallery({ images }) {
               className="gallery-image"
               src={image.src}
               alt={image.alt}
-              height="150"
+              height={150}
             />
             <TbZoom />
           </div>
