@@ -6,6 +6,8 @@ import { getCookie, setCookie } from 'cookies-next'
 import { Button, Link } from 'react-aria-components'
 import './CookieBanner.scss'
 
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+
 export function CookieBanner() {
   const [cookiesAccepted, setCookiesAccepted] = useState(false)
   const [showBanner, setShowBanner] = useState(false)
@@ -37,7 +39,7 @@ export function CookieBanner() {
         <>
           <Script
             strategy="afterInteractive"
-            src="https://www.googletagmanager.com/gtag/js?id=G-R8XF1ZDVGT"
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           />
           <Script
             id="google-analytics"
@@ -47,7 +49,7 @@ export function CookieBanner() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-R8XF1ZDVGT', {
+            gtag('config', '${GA_ID}', {
               page_path: window.location.pathname,});
           `,
             }}
