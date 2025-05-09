@@ -7,6 +7,24 @@
         width: 80%;
         text-align: center;
     }
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.5rem auto;
+        span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            svg {
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+
+    }
+
     iframe {
         height: clamp(100px, 40vh, 50rem);
         margin: 1rem auto;

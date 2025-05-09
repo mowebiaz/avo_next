@@ -33,9 +33,9 @@ export function StationContent() {
           des neiges. Le domaine skiable franco-suisse des{' '}
           <LinkAria
             className="link"
-            href={"https://www.portesdusoleil.com/"}
+            href={'https://www.portesdusoleil.com/'}
             target="_blank"
-            referrerPolicy='no-opener no-referrer'
+            referrerPolicy="no-opener no-referrer"
           >
             Portes du Soleil
           </LinkAria>
@@ -53,9 +53,9 @@ export function StationContent() {
           VTT, via-ferrata, randonnée, parapente, rafting,{' '}
           <LinkAria
             className="link"
-            href={"https://www.avoriaz.com/activites-ete/golf-d-avoriaz/golf/"}
+            href={'https://www.avoriaz.com/activites-ete/golf-d-avoriaz/golf/'}
             target="_blank"
-            referrerPolicy='no-opener no-referrer'
+            referrerPolicy="no-opener no-referrer"
           >
             golf
           </LinkAria>
@@ -73,11 +73,10 @@ export function StationContent() {
             src={Winter}
             alt="Vue panoramique de la station de ski d'Avoriaz en hiver"
             placeholder="blur"
-/*             width={795}
-            height={450} */
+            width={795}
+            height={450}
             priority
-            sizes='(max-width: 920px) 80vw, (max-width: 1440px) 40vw, 566px'
-
+            sizes="(max-width: 920px) 80vw, (max-width: 1440px) 40vw, 566px"
           />
         </div>
         <div className="image-container">
@@ -86,10 +85,10 @@ export function StationContent() {
             src={Summer}
             alt="Vue panoramique de la station de ski d'Avoriaz en été"
             placeholder="blur"
-/*             width={943}
-            height={450} */
+            width={943}
+            height={450}
             priority
-            sizes='(max-width: 920px) 100vw, 50vw'
+            sizes="(max-width: 920px) 80vw, (max-width: 1440px) 40vw, 566px"
           />
         </div>
       </div>
